@@ -10,7 +10,7 @@ define( 'CHILD_THEME_VERSION', '2.1.2' );
 //* Enqueue Scripts
 add_action( 'wp_enqueue_scripts', 'genesis_starter_enqueue_scripts' );
 
-function genesis_starter_enqueue_scripts () {
+function genesis_starter_enqueue_scripts() {
 	$assets_uri = get_stylesheet_directory_uri() . '/public/';
 
 	wp_enqueue_script( 'genesis-starter-head',

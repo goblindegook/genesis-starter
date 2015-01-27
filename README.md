@@ -2,12 +2,23 @@
 
 A Genesis Framework starter theme with Gulp support.  I took StudioPress' original Genesis Sampler theme and added my stuff.
 
+## Requirements
+
+* [WordPress](https://wordpress.org/)
+* [Genesis Framework](http://my.studiopress.com/themes/genesis/)
+* [Composer](https://getcomposer.org/)
+* [Node](http://nodejs.org/) (for NPM)
+* [Gulp](http://gulpjs.com/)
+* [Browserify](http://browserify.org/)
+* [Sass](http://sass-lang.com/)
+
 ## Setup
 
 1. Clone this repository and change the theme's name.
 2. There is no `style.css` in the root, that is built by Gulp. The header comment metadata can be edited at `src/sass/_meta.scss`.
-3. Run `npm install` to setup the build tools.
-4. Run `gulp build` to generate public site assets from sources.
+3. Run `composer install` to install PHP dependencies.
+4. Run `npm install` to setup the build tools and install JavaScript dependencies.
+5. Run `gulp build` to generate public site assets from sources.
 
 ## CSS Preprocessor Support
 

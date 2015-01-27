@@ -22,16 +22,23 @@ module.exports =
     src: src + '/images/**'
     dest: dest + '/images'
 
+  phpunit:
+    src: './test/phpunit/**/*.test.php'
+
   jasmine:
     specs: dest + '/specs.js'
 
+  jshint:
+    src:      src + '/scripts/**/*.js'
+    reporter: 'jshint-stylish'
+
   browserSync:
-    server:
-      baseDir: [dest, src]
+    host: 'local.wordpress.dev'
     files: [
       dest + '/**'
       '!' + dest + '/**.map' # Exclude sourcemaps
     ]
+    # scriptPath: (path) -> 'localhost:3000' + path
 
   browserify:
     debug: debug,
@@ -53,7 +60,7 @@ module.exports =
       dest: dest
       outputName: 'head.js'
     ,
-      entries: './spec/**/*.spec.{js,coffee}'
+      entries: './test/jasmine/**/*.spec.{js,coffee}'
       dest: dest
       outputName: 'specs.js'
     ]
