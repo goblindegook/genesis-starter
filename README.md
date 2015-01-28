@@ -32,6 +32,27 @@ By default, your code is concatenated into a file called `app.js`, while externa
 
 The Browserify build process handles CoffeeScript transparently, so you can code in either language.
 
+## Build Tasks
+
+The Genesis starter provides the following Gulp tasks.
+
+| Task          | Description                                        |
+| ------------- | -------------------------------------------------- |
+| `browserify`  | Packages JavaScript bundles from their sources.    |
+| `browserSync` | Not yet working.                                   |
+| `build`       | Runs `browserify`, `sass` and `images`.            |
+| `clean`       | Deletes the built assets so you can start afresh.  |
+| `default`     | Runs `watch`.                                      |
+| `images`      | Copies and compresses image assets.                |
+| `jasmine`     | Runs Jasmine specs.                                |
+| `jshint`      | Lints your JavaScript code.                        |
+| `phpunit`     | Runs PHPUnit test cases.                           |
+| `sass`        | Compiles, minifies and concatenates CSS from Sass. |
+| `test`        | Runs `jasmine` and `phpunit`.                      |
+| `watch`       | Watches files for changes and rebuilds assets.     |
+
+Task parameters may be configured via the _gulp/config.coffee_ file.
+
 ## License
 
 Genesis Starter is released under the GPL 2.0 Free Software License.

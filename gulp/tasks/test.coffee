@@ -1,3 +1,3 @@
 gulp = require 'gulp'
 
-gulp.task 'test', ['jasmine']
+gulp.task 'test', ['jasmine', 'phpunit']
