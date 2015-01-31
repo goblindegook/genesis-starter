@@ -33,12 +33,12 @@ module.exports =
     reporter: 'jshint-stylish'
 
   browserSync:
-    host: 'local.wordpress.dev'
+    proxy: 'local.wordpress.dev'
     files: [
+      '**/*.php'
       dest + '/**'
       '!' + dest + '/**.map' # Exclude sourcemaps
     ]
-    # scriptPath: (path) -> 'localhost:3000' + path
 
   browserify:
     debug: debug,
