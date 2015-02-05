@@ -7,6 +7,10 @@ define( 'CHILD_THEME_NAME', 'Genesis Starter Theme' );
 define( 'CHILD_THEME_URL', 'https://github.com/goblindegook/genesis-starter' );
 define( 'CHILD_THEME_VERSION', '2.1.2' );
 
+//* Set Localization (do not remove)
+load_child_theme_textdomain( 'genesis-starter',
+	apply_filters( 'child_theme_textdomain', get_stylesheet_directory() . '/languages', 'genesis-starter' ) );
+
 //* Enqueue Scripts
 add_action( 'wp_enqueue_scripts', 'genesis_starter_enqueue_scripts' );
 
