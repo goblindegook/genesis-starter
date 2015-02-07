@@ -15,6 +15,7 @@ module.exports =
     src: src + '/sass/*.{sass,scss}'
     dest: './'
     settings:
+      includePaths: require('node-neat').includePaths
       sourceComments: do -> 'map' if debug
       imagePath: 'public/images'
 
