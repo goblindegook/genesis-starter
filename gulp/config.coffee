@@ -1,3 +1,6 @@
+node    = require './util/node'
+bourbon = require 'node-bourbon'
+
 src   = './src'
 dest  = './public'
 debug = true
@@ -15,7 +18,9 @@ module.exports =
     src: src + '/sass/*.{sass,scss}'
     dest: './'
     settings:
-      includePaths: require('node-neat').includePaths
+      includePaths: bourbon.with [
+        node.path 'susy/sass'
+      ]
       sourceComments: do -> 'map' if debug
       imagePath: 'public/images'
 
