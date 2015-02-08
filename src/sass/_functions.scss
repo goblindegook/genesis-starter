@@ -1,59 +1,11 @@
 /**
- * Get main body properties.
+ * Get style properties.
  */
-@function genesis-body($key) {
-  @if map-has-key($body, $key) {
-    @return map-get($body, $key);
+@function genesis-style($map, $key) {
+  @if map-has-key($map, $key) {
+    @return map-get($map, $key);
   }
  
-  @warn "Unknown `#{$key}` in $body.";
-  @return null;
-}
-
-/**
- * Get selection properties.
- */
-@function genesis-selection($key) {
-  @if map-has-key($selection, $key) {
-    @return map-get($selection, $key);
-  }
- 
-  @warn "Unknown `#{$key}` in $selection.";
-  @return null;
-}
-
-/**
- * Get link properties.
- */
-@function genesis-link($key) {
-  @if map-has-key($link, $key) {
-    @return map-get($link, $key);
-  }
- 
-  @warn "Unknown `#{$key}` in $link.";
-  @return null;
-}
-
-/**
- * Get menu properties.
- */
-@function genesis-menu($key) {
-  @if map-has-key($menu, $key) {
-    @return map-get($menu, $key);
-  }
- 
-  @warn "Unknown `#{$key}` in $menu.";
-  @return null;
-}
-
-/**
- * Get sidebar properties.
- */
-@function genesis-sidebar($key) {
-  @if map-has-key($sidebar, $key) {
-    @return map-get($sidebar, $key);
-  }
- 
-  @warn "Unknown `#{$key}` in $sidebar.";
+  @warn "Unknown `#{$key}` in `#{$map}`.";
   @return null;
 }

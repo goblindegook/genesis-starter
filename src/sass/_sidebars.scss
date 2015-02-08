@@ -5,7 +5,7 @@
   font-size: 16px;
 
   li {
-    border-bottom:  genesis-sidebar(border);
+    border-bottom:  genesis-style($sidebar, border);
     margin-bottom:  10px;
     padding-bottom: 10px;
   }
@@ -16,7 +16,7 @@
   }
 
   .widget {
-    background-color: genesis-sidebar(background-color);
+    background-color: genesis-style($sidebar, background-color);
     margin-bottom:    40px;
     padding:          40px;
   }

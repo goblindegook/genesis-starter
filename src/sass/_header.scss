@@ -2,8 +2,8 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .site-header {
-  background-color: #fff;
-  min-height: 160px;
+  background-color: genesis-style($header, background-color);
+  min-height:       160px;
 
   .wrap {
     padding: 40px 0;
@@ -18,7 +18,7 @@
 --------------------------------------------- */
 
 .title-area {
-  @include span(4 of 12);
+  @include span(6 of 12);
   padding: 10px 0;
 
   .header-full-width & {
@@ -87,7 +87,7 @@
 --------------------------------------------- */
 
 .site-header .widget-area {
-  @include span(8 of 12 last);
+  @include span(6 of 12 last);
   text-align: right;
 
   @include susy-breakpoint(max-width 960px) {

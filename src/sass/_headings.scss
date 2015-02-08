@@ -7,33 +7,33 @@ h3,
 h4,
 h5,
 h6 {
-  color: #333;
-  font-family: Lato, sans-serif;
-  font-weight: 400;
-  line-height: 1.2;
-  margin: 0 0 10px;
+  color:       genesis-style($heading, color);
+  font-family: genesis-style($heading, font-family);
+  font-weight: genesis-style($heading, font-weight);
+  line-height: genesis-style($heading, line-height);
+  margin:      0 0 10px;
 }
 
 h1 {
-  font-size: 36px;
+  font-size: genesis-style($heading, h1-font-size);
 }
 
 h2 {
-  font-size: 30px;
+  font-size: genesis-style($heading, h2-font-size);
 }
 
 h3 {
-  font-size: 24px;
+  font-size: genesis-style($heading, h3-font-size);
 }
 
 h4 {
-  font-size: 20px;
+  font-size: genesis-style($heading, h4-font-size);
 }
 
 h5 {
-  font-size: 18px;
+  font-size: genesis-style($heading, h5-font-size);
 }
 
 h6 {
-  font-size: 16px;
+  font-size: genesis-style($heading, h6-font-size);
 }

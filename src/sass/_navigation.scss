@@ -3,8 +3,8 @@
 
 .genesis-nav-menu {
   clear:       both;
-  font-size:   genesis-menu(font-size);
-  line-height: genesis-menu(line-height);
+  font-size:   genesis-style($menu, font-size);
+  line-height: genesis-style($menu, line-height);
   width:       100%;
 
   .menu-item {
@@ -22,14 +22,14 @@
   }
 
   a {
-    color:   genesis-menu(color);
+    color:   genesis-style($menu, color);
     display: block;
     padding: 30px 24px;
 
     &:hover,
     .current-menu-item > &,
     .sub-menu .current-menu-item > &:hover {
-      color: genesis-menu(active-color);
+      color: genesis-style($menu, active-color);
     }
   }
 
@@ -42,10 +42,10 @@
     z-index:    99;
   
     a {
-      background-color: genesis-menu(background-color);
-      border:           genesis-menu(border);
+      background-color: genesis-style($menu, background-color);
+      border:           genesis-style($menu, border);
       border-top:       none;
-      font-size:        genesis-menu(small-font-size);
+      font-size:        genesis-style($menu, small-font-size);
       padding:          20px;
       position:         relative;
       width:            200px;
@@ -65,7 +65,7 @@
   }
 
   & > .right {
-    color:           genesis-menu(background-color);
+    color:           genesis-style($menu, background-color);
     float:           right;
     list-style-type: none;
     padding:         30px 0;
@@ -108,7 +108,7 @@
 
 .site-header {
   .sub-menu {
-    border-top: genesis-menu(border);
+    border-top: genesis-style($menu, border);
 
     .sub-menu {
       margin-top: -56px;
@@ -130,21 +130,21 @@
 --------------------------------------------- */
 
 .nav-primary {
-  background-color: genesis-menu(color);
+  background-color: genesis-style($menu, color);
 
   .genesis-nav-menu {
     a {
-      color: genesis-menu(background-color);
+      color: genesis-style($menu, background-color);
     }
 
     .sub-menu a {
-      color: genesis-menu(color);
+      color: genesis-style($menu, color);
     }
 
     a:hover,
     .current-menu-item > a,
     .sub-menu .current-menu-item > a:hover {
-      color: genesis-menu(active-color);
+      color: genesis-style($menu, active-color);
     }
   }
 }
@@ -153,5 +153,5 @@
 --------------------------------------------- */
 
 .nav-secondary {
-  background-color: genesis-menu(background-color);
+  background-color: genesis-style($menu, background-color);
 }
