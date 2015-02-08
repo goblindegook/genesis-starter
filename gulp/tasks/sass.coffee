@@ -13,7 +13,7 @@ gulp.task 'sass', ['images'], ->
     .pipe gulpIf config.debug, sourcemaps.init()
     .pipe sass config.sass.settings
       .on 'error', handleErrors
-    .pipe autoprefixer { browsers: ['last 2 version'] }
+    .pipe autoprefixer config.autoprefixer
     .pipe minifyCss { keepSpecialComments: '*' }
     .pipe gulpIf config.debug, sourcemaps.write()
     .pipe gulp.dest config.sass.dest

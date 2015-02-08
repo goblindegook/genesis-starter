@@ -24,6 +24,9 @@ module.exports =
       sourceComments: do -> 'map' if debug
       imagePath: 'public/images'
 
+  autoprefixer:
+    browsers: [ 'last 2 versions' ]
+
   images:
     src: src + '/images/**'
     dest: dest + '/images'
