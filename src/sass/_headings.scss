@@ -15,25 +15,25 @@ h6 {
 }
 
 h1 {
-  font-size: genesis-style($heading, h1-font-size);
+  font-size: genesis-style($heading, font-size);
 }
 
 h2 {
-  font-size: genesis-style($heading, h2-font-size);
+  font-size: genesis-style($heading, font-size) * power(0.85, 1);
 }
 
 h3 {
-  font-size: genesis-style($heading, h3-font-size);
+  font-size: genesis-style($heading, font-size) * power(0.85, 2);
 }
 
 h4 {
-  font-size: genesis-style($heading, h4-font-size);
+  font-size: genesis-style($heading, font-size) * power(0.85, 3);
 }
 
 h5 {
-  font-size: genesis-style($heading, h5-font-size);
+  font-size: genesis-style($heading, font-size) * power(0.85, 4);
 }
 
 h6 {
-  font-size: genesis-style($heading, h6-font-size);
+  font-size: genesis-style($heading, font-size) * power(0.85, 5);
 }
