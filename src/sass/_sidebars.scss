@@ -2,7 +2,7 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .sidebar {
-  font-size: 16px;
+  font-size: $sidebar-font-size;
 
   li {
     border-bottom:  $sidebar-border;

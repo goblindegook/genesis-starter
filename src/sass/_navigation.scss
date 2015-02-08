@@ -45,7 +45,7 @@
       background-color: $menu-background-color;
       border:           $menu-border;
       border-top:       none;
-      font-size:        $menu-small-font-size;
+      font-size:        $menu-font-size * 0.9;
       padding:          20px;
       position:         relative;
       width:            200px;
@@ -84,7 +84,7 @@
     padding: 10px 0 0;
   }
 
-  @include susy-breakpoint(max-width 960px) {
+  @include susy-breakpoint(max-width $breakpoint-large) {
     text-align: center;
 
     li {
@@ -119,7 +119,7 @@
     margin-left: 0;
   }
 
-  @include susy-breakpoint(max-width 960px) {
+  @include susy-breakpoint(max-width $breakpoint-large) {
     ul.genesis-nav-menu {
       float: none;
     }

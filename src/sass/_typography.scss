@@ -2,6 +2,7 @@
 --------------------------------------------- */
 
 body {
+  @include word-wrap;
   background-color: $body-background-color;
   color:            $body-color;
   font-family:      $body-font-family;
@@ -9,10 +10,11 @@ body {
   font-weight:      $body-font-weight;
   line-height:      $body-line-height;
   margin:           0;
+  word-break:       break-word;
 
-  @include susy-breakpoint(max-width 800px) {
-    background-color: $body-small-background-color;
-    font-size:        $body-small-font-size;
+  @include susy-breakpoint(max-width $breakpoint-medium) {
+    background-color: lighten($body-background-color, 4%);
+    font-size:        $body-font-size * 0.9;
   }
 }
 
@@ -57,15 +59,12 @@ li {
   list-style-type: none;
 }
 
-b,
-strong {
+b, strong {
   font-weight: 700;
 }
 
 blockquote,
-cite,
-em,
-i {
+cite, em, i {
   font-style: italic;
 }
 

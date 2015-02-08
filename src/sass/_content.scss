@@ -166,7 +166,7 @@ li.comment {
   padding: 24px;
 }
 
-@include susy-breakpoint(max-width 800px) {
+@include susy-breakpoint(max-width $breakpoint-medium) {
   .archive-description,
   .author-box,
   .comment-respond,

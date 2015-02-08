@@ -2,6 +2,8 @@
 //* Start the engine
 include_once( get_template_directory() . '/lib/init.php' );
 
+include_once( get_stylesheet_directory() . '/inc/content.php' );
+
 //* Child theme (do not remove)
 define( 'CHILD_THEME_NAME', 'Genesis Starter Theme' );
 define( 'CHILD_THEME_URL', 'https://github.com/goblindegook/genesis-starter' );

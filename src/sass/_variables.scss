@@ -4,50 +4,87 @@ $susy: (
   global-box-sizing: border-box,
 );
 
-$breakpoints: (
-  maximum: 1200px,
-  large:   960px,
-  medium:  800px,
-);
+$breakpoint-maximum: 1200px;
+$breakpoint-large:   960px;
+$breakpoint-medium:  800px;
 
-$header-background-color: white;
+$font-family:                   Lato, sans-serif;
+$font-size:                     18px;
+$font-weight:                   300;
+$line-height:                   1.625;
 
-$body-background-color:       #f5f5f5;
-$body-color:                  #333;
-$body-font-family:            Lato, sans-serif;
-$body-font-size:              18px;
-$body-font-weight:            300;
-$body-line-height:            1.625;
-$body-small-background-color: white;
-$body-small-font-size:        16px;
+$font-family-alt:               Lato, sans-serif;
+$font-size-alt:                 36px;
+$font-weight-alt:               400;
+$line-height-alt:               1.2;
 
-$heading-color:       #333;
-$heading-font-family: Lato, sans-serif;
-$heading-font-size:   36px;
-$heading-font-weight: 400;
-$heading-line-height: 1.2;
+$color-background:              white;
+$color-highlight:               #e5554e;
+$color-text:                    #333;
 
-$selection-background-color: #333;
-$selection-color:            white;
+$color-background-alt:          #333;
+$color-highlight-alt:           #333;
+$color-text-alt:                white;
 
-$link-active-color: #333;
-$link-color:        #e5554e;
-$link-decoration:   none;
+$border:                        1px solid #ddd;
+$border-alt:                    1px solid #999;
 
-$menu-active-color:     #e5554e;
-$menu-background-color: white;
-$menu-border:           1px solid #eee;
-$menu-color:            #333;
-$menu-font-size:        16px;
-$menu-line-height:      1;
-$menu-small-font-size:  14px;
+$header-background-color:       $color-background;
 
-$sidebar-background-color: white;
-$sidebar-border:           1px dotted #ddd;
+$body-background-color:         darken($color-background, 4%);
+$body-color:                    $color-text;
+$body-font-family:              $font-family;
+$body-font-size:                $font-size;
+$body-font-weight:              $font-weight;
+$body-line-height:              $line-height;
 
-$footer-active-color:     white;
-$footer-background-color: #333;
-$footer-color:            #999;
-$footer-border:           1px dotted #666;
-$footer-font-size:        16px;
-$footer-line-height:      1;
+$heading-color:                 $color-text;
+$heading-font-family:           $font-family-alt;
+$heading-font-size:             $font-size-alt;
+$heading-font-weight:           $font-weight-alt;
+$heading-line-height:           $line-height-alt;
+
+$selection-background-color:    $color-background-alt;
+$selection-color:               $color-text-alt;
+
+$link-active-color:             $color-highlight-alt;
+$link-color:                    $color-highlight;
+$link-decoration:               none;
+
+$input-active-background-color: white;
+$input-active-text-color:       $color-highlight-alt;
+$input-active-border:           $border-alt;
+$input-background-color:        white;
+$input-placeholder-text-color:  $color-text;
+$input-text-color:              $color-text;
+$input-text-font-size:          18px;
+$input-text-font-weight:        300;
+$input-border:                  $border;
+
+$button-active-color:           $color-highlight;
+$button-active-text-color:      $color-text-alt;
+$button-color:                  $color-highlight-alt;
+$button-text-color:             $color-text-alt;
+
+$alt-button-active-color:       $color-background;
+$alt-button-active-text-color:  $color-highlight-alt;
+$alt-button-color:              $color-highlight;
+$alt-button-text-color:         $color-text-alt;
+
+$menu-active-color:             $color-highlight;
+$menu-background-color:         $color-background;
+$menu-border:                   1px solid #eee;
+$menu-color:                    $color-background-alt;
+$menu-font-size:                $font-size * 0.9;
+$menu-line-height:              1;
+
+$sidebar-background-color:      $color-background;
+$sidebar-border:                1px dotted #ddd;
+$sidebar-font-size:             $font-size * 0.9;
+
+$footer-active-color:           $color-text-alt;
+$footer-background-color:       $color-background-alt;
+$footer-color:                  #999;
+$footer-border:                 1px dotted #666;
+$footer-font-size:              $font-size * 0.9;
+$footer-line-height:            1;

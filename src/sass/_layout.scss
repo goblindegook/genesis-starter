@@ -8,12 +8,12 @@
 .wrap {
   @include container;
 
-  @include susy-breakpoint(max-width 1200px) {
-    @include container(960px);
+  @include susy-breakpoint(max-width $breakpoint-maximum) {
+    @include container($breakpoint-large);
   }
 
-  @include susy-breakpoint(max-width 960px) {
-    @include container(800px);
+  @include susy-breakpoint(max-width $breakpoint-large) {
+    @include container($breakpoint-medium);
     padding: gutter();
   }
 }
@@ -42,7 +42,7 @@
   }
   .sidebar-secondary    { @include span(2 of 12 last); }
 
-  @include susy-breakpoint(max-width 1200px) {
+  @include susy-breakpoint(max-width $breakpoint-maximum) {
     .content-sidebar-wrap { @include span(full);
       .content            { @include span(8 of 12); }
       .sidebar-primary    { @include span(4 of 12 last); }
@@ -58,7 +58,7 @@
     .sidebar-primary    { @include span(3 of 10 last); }
   }
 
-  @include susy-breakpoint(max-width 1200px) {
+  @include susy-breakpoint(max-width $breakpoint-maximum) {
     .sidebar-secondary    { @include span(full); }
     .content-sidebar-wrap { @include span(full);
       .content              { @include span(8 of 12); }
@@ -74,7 +74,7 @@
     .content            { @include span(7 of 10 last); }
   }
 
-  @include susy-breakpoint(max-width 1200px) {
+  @include susy-breakpoint(max-width $breakpoint-maximum) {
     .sidebar-secondary    { @include span(full); }
     .content-sidebar-wrap { @include span(full);
       .sidebar-primary      { @include span(4 of 12); }
@@ -87,7 +87,7 @@
   .content              { @include span(full); }
 }
 
-@include susy-breakpoint(max-width 960px) {
+@include susy-breakpoint(max-width $breakpoint-large) {
   .content-sidebar,
   .sidebar-content,
   .content-sidebar-sidebar,
@@ -126,7 +126,7 @@
     @include bs-last;
   }
 
-  @include susy-breakpoint(max-width 960px) {
+  @include susy-breakpoint(max-width $breakpoint-large) {
     @include span(full);
   }
 }
