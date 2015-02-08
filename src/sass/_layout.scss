@@ -104,12 +104,33 @@
 /* ## Column Classes
 --------------------------------------------- */
 
-.one-half, .three-sixths, .two-fourths { @include bs-span(6 of 12); }
+.one-half, .two-fourths, .three-sixths { @include bs-span(6 of 12); }
 .one-third, .two-sixths                { @include bs-span(4 of 12); }
-.four-sixths, .two-thirds              { @include bs-span(8 of 12); }
+.two-thirds, .four-sixths,             { @include bs-span(8 of 12); }
 .one-fourth                            { @include bs-span(3 of 12); }
 .three-fourths                         { @include bs-span(9 of 12); }
 .one-sixth                             { @include bs-span(2 of 12); }
 .five-sixths                           { @include bs-span(10 of 12); }
 
-.first { @include first; margin-left: 0; }
+.first { @include first; }
+.last  { @include last; }
+
+.one-half, .two-fourths, .three-sixths,
+.one-third, .two-sixths,
+.two-thirds, .four-sixths,
+.one-fourth,
+.three-fourths,
+.one-sixth,
+.five-sixths {
+  &.first {
+    @include bs-first;
+  }
+
+  &.last {
+    @include bs-last;
+  }
+
+  @include susy-breakpoint(max-width 960px, 12) {
+    @include span(full);
+  }
+}

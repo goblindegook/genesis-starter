@@ -38,22 +38,16 @@
 .footer-widgets-1,
 .footer-widgets-2,
 .footer-widgets-3 {
-  width: 340px;
-}
+  @import span(4 of 12);
 
-.footer-widgets-1 {
-  margin-right: 60px;
-}
-
-.footer-widgets-1,
-.footer-widgets-2 {
-  float: left;
+  @include susy-breakpoint(max-width 960px, 12) {
+    @import span(full);
+  }
 }
 
 .footer-widgets-3 {
-  float: right;
+  @import last;
 }
-
 
 /* # Site Footer
 ---------------------------------------------------------------------------------------------------- */

@@ -11,3 +11,9 @@
   @include first;
   margin-left: 0;
 }
+
+@mixin bs-last {
+  @include last;
+  margin-left: gutter();
+  margin-right: 0;
+}
