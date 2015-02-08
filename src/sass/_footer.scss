@@ -40,7 +40,7 @@
 .footer-widgets-3 {
   @include span(4 of 12);
 
-  @include susy-breakpoint(max-width 960px, 12) {
+  @include susy-breakpoint(max-width 960px) {
     @include span(full);
   }
 }
