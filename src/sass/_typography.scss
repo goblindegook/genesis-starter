@@ -2,17 +2,17 @@
 --------------------------------------------- */
 
 body {
-  background-color: genesis-style($body, background-color);
-  color:            genesis-style($body, color);
-  font-family:      genesis-style($body, font-family);
-  font-size:        genesis-style($body, font-size);
-  font-weight:      genesis-style($body, font-weight);
-  line-height:      genesis-style($body, line-height);
+  background-color: $body-background-color;
+  color:            $body-color;
+  font-family:      $body-font-family;
+  font-size:        $body-font-size;
+  font-weight:      $body-font-weight;
+  line-height:      $body-line-height;
   margin:           0;
 
   @include susy-breakpoint(max-width 800px) {
-    background-color: genesis-style($body, small-background-color);
-    font-size:        genesis-style($body, small-font-size);
+    background-color: $body-small-background-color;
+    font-size:        $body-small-font-size;
   }
 }
 
@@ -29,17 +29,17 @@ textarea:focus,
 }
 
 ::selection {
-  background-color: genesis-style($selection, background-color);
-  color:            genesis-style($selection, color);
+  background-color: $selection-background-color;
+  color:            $selection-color;
 }
 
 a {
-  color:           genesis-style($link, color);
-  text-decoration: genesis-style($link, text-decoration);
+  color:           $link-color;
+  text-decoration: $link-decoration;
 }
 
 a:hover {
-  color: genesis-style($link, active-color);
+  color: $link-active-color;
 }
 
 p {

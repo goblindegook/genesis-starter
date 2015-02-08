@@ -2,14 +2,14 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .footer-widgets {
-  background-color: genesis-style($footer, background-color);
+  background-color: $footer-background-color;
   clear: both;
   padding-top: 40px;
 }
 
 .footer-widgets,
 .footer-widgets a {
-  color: genesis-style($footer, color);
+  color: $footer-color;
 }
 
 .footer-widgets input {
@@ -18,11 +18,11 @@
 
 .footer-widgets a.button,
 .footer-widgets a:hover {
-  color: genesis-style($footer, active-color);
+  color: $footer-active-color;
 }
 
 .footer-widgets li {
-  border-bottom: genesis-style($footer, border);
+  border-bottom: $footer-border;
   margin-bottom: 10px;
   padding-bottom: 10px;
 }
@@ -54,8 +54,8 @@
 
 .site-footer {
   background-color: #fff;
-  font-size:        genesis-style($footer, font-size);
-  line-height:      genesis-style($footer, line-height);
+  font-size:        $footer-font-size;
+  line-height:      $footer-line-height;
   padding:          40px 0;
   text-align:       center;
 }

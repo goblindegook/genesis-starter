@@ -7,33 +7,33 @@ h3,
 h4,
 h5,
 h6 {
-  color:       genesis-style($heading, color);
-  font-family: genesis-style($heading, font-family);
-  font-weight: genesis-style($heading, font-weight);
-  line-height: genesis-style($heading, line-height);
+  color:       $heading-color;
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
+  line-height: $heading-line-height;
   margin:      0 0 10px;
 }
 
 h1 {
-  font-size: genesis-style($heading, font-size);
+  font-size: $heading-font-size;
 }
 
 h2 {
-  font-size: genesis-style($heading, font-size) * power(0.85, 1);
+  font-size: $heading-font-size * power(0.85, 1);
 }
 
 h3 {
-  font-size: genesis-style($heading, font-size) * power(0.85, 2);
+  font-size: $heading-font-size * power(0.85, 2);
 }
 
 h4 {
-  font-size: genesis-style($heading, font-size) * power(0.85, 3);
+  font-size: $heading-font-size * power(0.85, 3);
 }
 
 h5 {
-  font-size: genesis-style($heading, font-size) * power(0.85, 4);
+  font-size: $heading-font-size * power(0.85, 4);
 }
 
 h6 {
-  font-size: genesis-style($heading, font-size) * power(0.85, 5);
+  font-size: $heading-font-size * power(0.85, 5);
 }
