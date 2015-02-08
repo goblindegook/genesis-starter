@@ -3,21 +3,21 @@
 
 .sidebar {
   font-size: 16px;
-}
 
-.sidebar li {
-  border-bottom: 1px dotted #ddd;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-}
+  li {
+    border-bottom:  genesis-sidebar(border);
+    margin-bottom:  10px;
+    padding-bottom: 10px;
+  }
 
-.sidebar p:last-child,
-.sidebar ul > li:last-child {
-  margin-bottom: 0;
-}
+  p:last-child,
+  ul > li:last-child {
+    margin-bottom: 0;
+  }
 
-.sidebar .widget {
-  background-color: #fff;
-  margin-bottom: 40px;
-  padding: 40px;
+  .widget {
+    background-color: genesis-sidebar(background-color);
+    margin-bottom:    40px;
+    padding:          40px;
+  }
 }

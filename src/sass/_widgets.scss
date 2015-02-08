@@ -3,28 +3,29 @@
 
 .widget {
   word-wrap: break-word;
+
+  ol > li {
+    list-style-position: inside;
+    list-style-type: decimal;
+    padding-left: 20px;
+    text-indent: -20px;
+  }
+
+  li li {
+    border: none;
+    margin: 0 0 0 30px;
+    padding: 0;
+  }
 }
 
-.widget ol > li {
-  list-style-position: inside;
-  list-style-type: decimal;
-  padding-left: 20px;
-  text-indent: -20px;
-}
+.widget_calendar{
+  table {
+    width: 100%;
+  }
 
-.widget li li {
-  border: none;
-  margin: 0 0 0 30px;
-  padding: 0;
-}
-
-.widget_calendar table {
-  width: 100%;
-}
-
-.widget_calendar td,
-.widget_calendar th {
-  text-align: center;
+  td, th {
+    text-align: center;
+  }
 }
 
 /* ## Featured Content

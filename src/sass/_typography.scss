@@ -2,13 +2,18 @@
 --------------------------------------------- */
 
 body {
-  background-color: #f5f5f5;
-  color: #333;
-  font-family: Lato, sans-serif;
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 1.625;
-  margin: 0;
+  background-color: genesis-body(background-color);
+  color:            genesis-body(color);
+  font-family:      genesis-body(font-family);
+  font-size:        genesis-body(font-size);
+  font-weight:      genesis-body(font-weight);
+  line-height:      genesis-body(line-height);
+  margin:           0;
+
+  @include susy-breakpoint(max-width 800px) {
+    background-color: genesis-body(small-background-color);
+    font-size:        genesis-body(small-font-size);
+  }
 }
 
 a,
@@ -20,21 +25,21 @@ input[type="submit"],
 textarea:focus,
 .button,
 .gallery img {
-  transition:         all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 ::selection {
-  background-color: #333;
-  color: #fff;
+  background-color: genesis-selection(background-color);
+  color:            genesis-selection(color);
 }
 
 a {
-  color: #e5554e;
-  text-decoration: none;
+  color:           genesis-link(color);
+  text-decoration: genesis-link(text-decoration);
 }
 
 a:hover {
-  color: #333;
+  color: genesis-link(active-color);
 }
 
 p {
@@ -69,11 +74,11 @@ blockquote {
 }
 
 blockquote::before {
-  content: "\201C";
-  display: block;
+  content:   "\201C";
+  display:   block;
   font-size: 30px;
-  height: 0;
-  left: -20px;
-  position: relative;
-  top: -10px;
+  height:    0;
+  left:      -20px;
+  position:  relative;
+  top:       -10px;
 }

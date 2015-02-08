@@ -11,6 +11,10 @@
 
 .sidebar .widget.enews-widget {
   background-color: #333;
+
+  @include susy-breakpoint(max-width 800px) {
+    padding: 40px;
+  }
 }
 
 .enews-widget input,

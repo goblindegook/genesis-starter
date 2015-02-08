@@ -25,12 +25,6 @@
     @include span(full);
   }
 
-  .header-image & {
-    @include susy-breakpoint(max-width 960px) {
-      background-position: center top;
-    }
-  }
-
   @include susy-breakpoint(max-width 960px) {
     @include span(full);
   }
@@ -77,10 +71,14 @@
   .site-title {
     text-align: center;
   }
-  
+
   .site-header .search-form {
     float: none;
     margin: 16px auto;
+  }
+
+  .header-image .title-area {
+    background-position: center top;
   }
 }
 

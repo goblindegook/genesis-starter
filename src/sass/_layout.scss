@@ -116,12 +116,8 @@
 .last  { @include last; }
 
 .one-half, .two-fourths, .three-sixths,
-.one-third, .two-sixths,
-.two-thirds, .four-sixths,
-.one-fourth,
-.three-fourths,
-.one-sixth,
-.five-sixths {
+.one-third, .two-sixths, .two-thirds, .four-sixths,
+.one-fourth, .three-fourths, .one-sixth, .five-sixths {
   &.first {
     @include bs-first;
   }
