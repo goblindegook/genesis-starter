@@ -38,15 +38,15 @@
 .footer-widgets-1,
 .footer-widgets-2,
 .footer-widgets-3 {
-  @import span(4 of 12);
+  @include span(4 of 12);
 
   @include susy-breakpoint(max-width 960px, 12) {
-    @import span(full);
+    @include span(full);
   }
 }
 
 .footer-widgets-3 {
-  @import last;
+  @include last;
 }
 
 /* # Site Footer

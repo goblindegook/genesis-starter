@@ -25,15 +25,10 @@ input[type="radio"] {
   width: auto;
 }
 
-::-moz-placeholder {
+::placeholder {
   color: #333;
   font-weight: 300;
   opacity: 1;
-}
-
-::-webkit-input-placeholder {
-  color: #333;
-  font-weight: 300;
 }
 
 button,
