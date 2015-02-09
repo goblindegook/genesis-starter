@@ -6,17 +6,17 @@
 
 .entry {
   margin-bottom: 40px;
-  padding: 50px 60px;
+  padding:       50px 60px;
 }
 
 .content .entry {
-  background-color: #fff;
+  background-color: $body-background-color;
 }
 
 .entry-content {
   ol, ul {
     margin-bottom: 28px;
-    margin-left: 40px;
+    margin-left:   40px;
   }
 
   ol ol, ul ul {
@@ -32,8 +32,8 @@
   }
 
   code {
-    background-color: #333;
-    color: #ddd;
+    background-color: $code-background-color;
+    color:            $code-text-color;
   }
 }
 
@@ -50,7 +50,7 @@ p.entry-meta {
 }
 
 .entry-footer .entry-meta {
-  border-top: 2px solid #f5f5f5;
+  border-top:  2px solid #f5f5f5;
   padding-top: 24px;
 }
 
@@ -61,14 +61,14 @@ p.entry-meta {
 
 .entry-comments-link::before {
   content: "\2014";
-  margin: 0 6px 0 2px;
+  margin:  0 6px 0 2px;
 }
 
 /* ## Pagination
 --------------------------------------------- */
 
 .pagination {
-  clear: both;
+  clear:  both;
   margin: 40px 0;
 }
 
@@ -81,17 +81,17 @@ p.entry-meta {
 }
 
 .archive-pagination li a {
-  background-color: #333;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 16px;
-  padding: 8px 12px;
+  background-color: $button-color;
+  color:            $button-text-color;
+  cursor:           pointer;
+  display:          inline-block;
+  font-size:        16px;
+  padding:          8px 12px;
 }
 
 .archive-pagination li a:hover,
 .archive-pagination .active a {
-  background-color: #e5554e;
+  background-color: $button-active-color;
 }
 
 /* ## Comments
@@ -100,8 +100,8 @@ p.entry-meta {
 .comment-respond,
 .entry-comments,
 .entry-pings {
-  background-color: #fff;
-  margin-bottom: 40px;
+  background-color: $body-background-color;
+  margin-bottom:    40px;
 }
 
 .comment-respond,
@@ -122,9 +122,9 @@ p.entry-meta {
 }
 
 li.comment {
-  background-color: #f5f5f5;
-  border: 2px solid #fff;
-  border-right: none;
+  background-color: $body-background-color;
+  border:           2px solid #fff;
+  border-right:     none;
 }
 
 .comment-content {
@@ -133,7 +133,7 @@ li.comment {
 
 .comment-list li {
   margin-top: 24px;
-  padding: 32px;
+  padding:    32px;
 
   li {
     margin-right: -32px;
@@ -148,7 +148,7 @@ li.comment {
   }
 
   label {
-    display: block;
+    display:      block;
     margin-right: 12px;
   }
 }
@@ -162,8 +162,8 @@ li.comment {
 
 .form-allowed-tags {
   background-color: #f5f5f5;
-  font-size: 16px;
-  padding: 24px;
+  font-size:        16px;
+  padding:          24px;
 }
 
 @include susy-breakpoint(max-width $breakpoint-medium) {

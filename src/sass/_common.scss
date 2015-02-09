@@ -30,10 +30,10 @@
 
 .archive-description,
 .author-box {
-  background-color: #fff;
-  font-size: 16px;
-  margin-bottom: 40px;
-  padding: 40px;
+  background-color: $body-background-color;
+  font-size:        16px;
+  margin-bottom:    40px;
+  padding:          40px;
 }
 
 .author-box-title {
@@ -54,7 +54,7 @@
 }
 
 .site-header .search-form {
-  float: right;
+  float:      right;
   margin-top: 12px;
 }
 
@@ -65,13 +65,13 @@
 
 .genesis-nav-menu .search input[type="submit"],
 .widget_search input[type="submit"] {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  padding: 0;
+  border:   0;
+  clip:     rect(0, 0, 0, 0);
+  height:   1px;
+  margin:   -1px;
+  padding:  0;
   position: absolute;
-  width: 1px;
+  width:    1px;
 }
 
 /* ## Titles
@@ -83,24 +83,27 @@
 
 .entry-title {
   font-size: 36px;
-}
+  
+  a {
+    color: $link-active-color;
 
-.entry-title a,
-.sidebar .widget-title a {
-  color: #333;
-}
-
-.entry-title a:hover {
-  color: #e5554e;
+    &:hover {
+      color: $link-color;
+    }
+  }
 }
 
 .widget-title {
   font-size: 18px;
   margin-bottom: 20px;
-}
 
-.footer-widgets .widget-title {
-  color: #fff;
+  .sidebar & a {
+    color: $link-active-color;
+  }
+
+  .footer-widgets & {
+    color: $footer-active-color;
+  }
 }
 
 /* ## WordPress
@@ -116,12 +119,12 @@ a.alignnone {
 }
 
 .alignleft {
-  float: left;
+  float:      left;
   text-align: left;
 }
 
 .alignright {
-  float: right;
+  float:      right;
   text-align: right;
 }
 
@@ -134,7 +137,7 @@ a.alignright {
 img.centered,
 .aligncenter {
   display: block;
-  margin: 0 auto 24px;
+  margin:  0 auto 24px;
 }
 
 img.alignnone,
@@ -155,9 +158,9 @@ img.alignright,
 }
 
 .wp-caption-text {
-  font-size: 14px;
+  font-size:   14px;
   font-weight: 700;
-  text-align: center;
+  text-align:  center;
 }
 
 .entry-content p.wp-caption-text {

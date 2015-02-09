@@ -48,3 +48,7 @@ add_theme_support( 'custom-background' );
 
 //* Add support for 3-column footer widgets
 add_theme_support( 'genesis-footer-widgets', 3 );
+
+//* Add editor style support
+add_editor_style();
+add_editor_style( str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Lato:300,400,700' ) );

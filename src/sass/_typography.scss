@@ -3,7 +3,7 @@
 
 body {
   @include word-wrap;
-  background-color: $body-background-color;
+  background-color: darken($body-background-color, 4%);
   color:            $body-color;
   font-family:      $body-font-family;
   font-size:        $body-font-size;
@@ -13,7 +13,7 @@ body {
   word-break:       break-word;
 
   @include susy-breakpoint(max-width $breakpoint-medium) {
-    background-color: lighten($body-background-color, 4%);
+    background-color: $body-background-color;
     font-size:        $body-font-size * 0.9;
   }
 }

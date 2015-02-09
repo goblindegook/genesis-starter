@@ -29,9 +29,7 @@ $color-text-alt:                white;
 $border:                        1px solid #ddd;
 $border-alt:                    1px solid #999;
 
-$header-background-color:       $color-background;
-
-$body-background-color:         darken($color-background, 4%);
+$body-background-color:         $color-background;
 $body-color:                    $color-text;
 $body-font-family:              $font-family;
 $body-font-size:                $font-size;
@@ -77,6 +75,9 @@ $menu-border:                   1px solid #eee;
 $menu-color:                    $color-background-alt;
 $menu-font-size:                $font-size * 0.9;
 $menu-line-height:              1;
+
+$code-background-color:         $color-background-alt;
+$code-text-color:               #ddd;
 
 $sidebar-background-color:      $color-background;
 $sidebar-border:                1px dotted #ddd;
