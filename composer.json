@@ -9,5 +9,10 @@
             "name": "Luis Rodrigues",
             "email": "hello@goblindegook.net"
         }
-    ]
+    ],
+    "autoload": {
+      "psr-4": {
+        "goblindegook\\WP\\Theme\\Genesis_Starter\\": "inc/"
+      }
+    }
 }
