@@ -6,10 +6,16 @@ class Scripts {
 
 	private $base_uri;
 
+	/**
+	 * Constructor.
+	 */
 	public function __construct() {
 		$this->base_uri = \get_stylesheet_directory_uri() . '/public/';
 	}
 
+	/**
+	 * Setup hooks.
+	 */
 	public function ready() {
 		\add_action( 'wp_enqueue_scripts', [ $this, 'enqueue' ] );
 	}

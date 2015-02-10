@@ -25,6 +25,7 @@ add_theme_support( 'custom-background' );
 //* Add support for 3-column footer widgets
 add_theme_support( 'genesis-footer-widgets', 3 );
 
+//* Setup theme
 add_action( 'after_setup_theme', function () {
 	$scripts    = new \goblindegook\WP\Theme\Genesis_Starter\Scripts();	
 	$styles     = new \goblindegook\WP\Theme\Genesis_Starter\Styles();	
