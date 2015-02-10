@@ -17,7 +17,7 @@ class Scripts {
 	 * Setup hooks.
 	 */
 	public function ready() {
-		\add_action( 'wp_enqueue_scripts', [ $this, 'enqueue' ] );
+		\add_action( 'wp_enqueue_scripts', array( $this, 'enqueue' ) );
 	}
 
 	/**

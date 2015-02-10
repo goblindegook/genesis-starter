@@ -11,7 +11,7 @@ class Shortcodes {
 	 * Setup shortcode hooks.
 	 */
 	public function ready () {
-		$this->_replace_shortcode( 'gallery', [ $this, 'gallery_shortcode' ] );
+		$this->_replace_shortcode( 'gallery', array( $this, 'gallery_shortcode' ) );
 	}
 
 	/**

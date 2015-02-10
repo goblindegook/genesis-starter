@@ -6,6 +6,8 @@ class Styles {
 
 	private $base_uri;
 
+	private $google_fonts_uri = '//fonts.googleapis.com/css?family=';
+
 	/**
 	 * Constructor.
 	 */
@@ -17,7 +19,7 @@ class Styles {
 	 * Setup hooks.
 	 */
 	public function ready() {
-		\add_action( 'wp_enqueue_scripts', [ $this, 'enqueue' ] );
+		\add_action( 'wp_enqueue_scripts', array( $this, 'enqueue' ) );
 	}
 
 	/**
@@ -26,12 +28,11 @@ class Styles {
 	 * Fired on `wp_enqueue_scripts`.
 	 */
 	public function enqueue() {
-		
-		\wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:300,400,700', array(), CHILD_THEME_VERSION );
+		$font_family = 'Lato:300,400,700';
 
-		//* Add editor style support
 		\add_editor_style();
-		\add_editor_style( '//fonts.googleapis.com/css?family=' . urlencode( 'Lato:300,400,700' ) );
+		\add_editor_style( $this->google_fonts_uri . urlencode( $font_family ) );
+		\wp_enqueue_style( 'google-fonts', $this->google_fonts_uri . $font_family, array(), CHILD_THEME_VERSION );
 	}
 
 }

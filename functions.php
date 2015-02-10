@@ -1,5 +1,7 @@
 <?php
 
+use \goblindegook\WP\Theme\Genesis_Starter as Genesis_Starter;
+
 //* Start the engine
 include_once( get_template_directory() . '/lib/init.php' );
 include_once( get_stylesheet_directory() . '/vendor/autoload.php' );
@@ -27,9 +29,9 @@ add_theme_support( 'genesis-footer-widgets', 3 );
 
 //* Setup theme
 add_action( 'after_setup_theme', function () {
-	$scripts    = new \goblindegook\WP\Theme\Genesis_Starter\Scripts();	
-	$styles     = new \goblindegook\WP\Theme\Genesis_Starter\Styles();	
-	$shortcodes = new \goblindegook\WP\Theme\Genesis_Starter\Shortcodes();	
+	$scripts    = new Genesis_Starter\Scripts();
+	$styles     = new Genesis_Starter\Styles();
+	$shortcodes = new Genesis_Starter\Shortcodes();
 
 	$scripts->ready();
 	$styles->ready();
