@@ -2,7 +2,6 @@
 --------------------------------------------- */
 
 body {
-  @include word-wrap;
   background-color: darken($body-background-color, 4%);
   color:            $body-color;
   font-family:      $body-font-family;
@@ -10,7 +9,9 @@ body {
   font-weight:      $body-font-weight;
   line-height:      $body-line-height;
   margin:           0;
-  word-break:       break-word;
+  overflow-wrap:    break-word;
+  word-wrap:        break-word;
+  word-break:       break-all;
 
   @include susy-breakpoint(max-width $breakpoint-medium) {
     background-color: $body-background-color;

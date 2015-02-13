@@ -1,5 +1,4 @@
-node    = require './util/node'
-bourbon = require 'node-bourbon'
+node = require './util/node'
 
 src   = './src'
 dest  = './public'
@@ -18,7 +17,7 @@ module.exports =
     src: src + '/sass/*.{sass,scss}'
     dest: './'
     settings:
-      includePaths: bourbon.with [
+      includePaths: [
         node.path 'susy/sass'
       ]
       sourceComments: do -> 'map' if debug
