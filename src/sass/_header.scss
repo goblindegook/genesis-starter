@@ -19,11 +19,11 @@
   @include span(6 of 12);
   padding: 10px 0;
 
-  .header-full-width & {
+  @include susy-breakpoint(max-width $breakpoint-large) {
     @include span(full);
   }
 
-  @include susy-breakpoint(max-width $breakpoint-large) {
+  .header-full-width & {
     @include span(full);
   }
 }
@@ -39,7 +39,7 @@
   }
 
   .header-image & > a {
-    background: url(public/images/logo.png) no-repeat left;
+    background: url('public/images/logo.png') no-repeat left;
     float: left;
     min-height: 60px;
     width: 100%;
@@ -79,7 +79,6 @@
     background-position: center top;
   }
 }
-
 
 // Widget Area
 
