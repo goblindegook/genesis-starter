@@ -1,25 +1,25 @@
-/* ## Tables
---------------------------------------------- */
+// Tables
 
 table {
   border-collapse: collapse;
-  border-spacing:  0;
-  line-height:     2;
-  margin-bottom:   40px;
-  width:           100%;
+  border-spacing: 0;
+  line-height: 2;
+  margin-bottom: 40px;
+  width: 100%;
 }
 
 tbody {
   border-bottom: $border;
 }
 
-td, th {
+td,
+th {
   text-align: left;
 }
 
 td {
   border-top: $border;
-  padding:    6px 0;
+  padding: 6px 0;
 }
 
 th {

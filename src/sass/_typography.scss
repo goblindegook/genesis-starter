@@ -1,21 +1,20 @@
-/* ## Typographical Elements
---------------------------------------------- */
+// Typographical Elements
 
 body {
   background-color: darken($body-background-color, 4%);
-  color:            $body-color;
-  font-family:      $body-font-family;
-  font-size:        $body-font-size;
-  font-weight:      $body-font-weight;
-  line-height:      $body-line-height;
-  margin:           0;
-  overflow-wrap:    break-word;
-  word-wrap:        break-word;
-  word-break:       break-all;
+  color: $body-color;
+  font-family: $body-font-family;
+  font-size: $body-font-size;
+  font-weight: $body-font-weight;
+  line-height: $body-line-height;
+  margin: 0;
+  overflow-wrap: break-word;
+  word-break: break-all;
+  word-wrap: break-word;
 
   @include susy-breakpoint(max-width $breakpoint-medium) {
     background-color: $body-background-color;
-    font-size:        $body-font-size * 0.9;
+    font-size: $body-font-size * .9;
   }
 }
 
@@ -28,16 +27,16 @@ input[type="submit"],
 textarea:focus,
 .button,
 .gallery img {
-  transition: all 0.1s ease-in-out;
+  transition: all .1s ease-in-out;
 }
 
 ::selection {
   background-color: $selection-background-color;
-  color:            $selection-color;
+  color: $selection-color;
 }
 
 a {
-  color:           $link-color;
+  color: $link-color;
   text-decoration: $link-decoration;
 }
 
@@ -60,12 +59,15 @@ li {
   list-style-type: none;
 }
 
-b, strong {
+b,
+strong {
   font-weight: 700;
 }
 
 blockquote,
-cite, em, i {
+cite,
+em,
+i {
   font-style: italic;
 }
 
@@ -74,11 +76,11 @@ blockquote {
 }
 
 blockquote::before {
-  content:   "\201C";
-  display:   block;
+  content: '\201C';
+  display: block;
   font-size: 30px;
-  height:    0;
-  left:      -20px;
-  position:  relative;
-  top:       -10px;
+  height: 0;
+  left: -20px;
+  position: relative;
+  top: -10px;
 }
