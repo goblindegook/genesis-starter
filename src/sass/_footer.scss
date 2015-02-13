@@ -1,10 +1,9 @@
-/* # Footer Widgets
----------------------------------------------------------------------------------------------------- */
+// Footer Widgets
 
 .footer-widgets {
   background-color: $footer-background-color;
-  clear:            both;
-  padding-top:      40px;
+  clear: both;
+  padding-top: 40px;
 }
 
 .footer-widgets,
@@ -22,8 +21,8 @@
 }
 
 .footer-widgets li {
-  border-bottom:  $footer-border;
-  margin-bottom:  10px;
+  border-bottom: $footer-border;
+  margin-bottom: 10px;
   padding-bottom: 10px;
 }
 
@@ -49,15 +48,14 @@
   @include last;
 }
 
-/* # Site Footer
----------------------------------------------------------------------------------------------------- */
+// Site Footer
 
 .site-footer {
   background-color: $body-background-color;
-  font-size:        $footer-font-size;
-  line-height:      $footer-line-height;
-  padding:          40px 0;
-  text-align:       center;
+  font-size: $footer-font-size;
+  line-height: $footer-line-height;
+  padding: 40px 0;
+  text-align: center;
 }
 
 .site-footer p {

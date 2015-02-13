@@ -1,5 +1,4 @@
-/* # Site Header
----------------------------------------------------------------------------------------------------- */
+// Site Header
 
 .site-header {
   background-color: $body-background-color;
@@ -14,8 +13,7 @@
   }
 }
 
-/* ## Title Area
---------------------------------------------- */
+// Title Area
 
 .title-area {
   @include span(6 of 12);
@@ -83,8 +81,7 @@
 }
 
 
-/* ## Widget Area
---------------------------------------------- */
+// Widget Area
 
 .site-header .widget-area {
   @include span(6 of 12 last);

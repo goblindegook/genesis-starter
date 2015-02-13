@@ -1,8 +1,6 @@
-/* # Common Classes
----------------------------------------------------------------------------------------------------- */
+// Common Classes
 
-/* ## Avatar
---------------------------------------------- */
+// Avatar
 
 .avatar {
   float: left;
@@ -21,8 +19,7 @@
   margin: 0 16px 24px 0;
 }
 
-/* ## Genesis
---------------------------------------------- */
+// Genesis
 
 .breadcrumb {
   margin-bottom: 20px;
@@ -31,9 +28,9 @@
 .archive-description,
 .author-box {
   background-color: $body-background-color;
-  font-size:        16px;
-  margin-bottom:    40px;
-  padding:          40px;
+  font-size: 16px;
+  margin-bottom: 40px;
+  padding: 40px;
 }
 
 .author-box-title {
@@ -46,15 +43,14 @@
   margin-bottom: 0;
 }
 
-/* ## Search Form
---------------------------------------------- */
+// Search Form
 
 .search-form {
   overflow: hidden;
 }
 
 .site-header .search-form {
-  float:      right;
+  float: right;
   margin-top: 12px;
 }
 
@@ -65,17 +61,16 @@
 
 .genesis-nav-menu .search input[type="submit"],
 .widget_search input[type="submit"] {
-  border:   0;
-  clip:     rect(0, 0, 0, 0);
-  height:   1px;
-  margin:   -1px;
-  padding:  0;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  padding: 0;
   position: absolute;
-  width:    1px;
+  width: 1px;
 }
 
-/* ## Titles
---------------------------------------------- */
+// Titles
 
 .archive-title {
   font-size: 20px;
@@ -106,8 +101,7 @@
   }
 }
 
-/* ## WordPress
---------------------------------------------- */
+// WordPress
 
 a.aligncenter img {
   display: block;
@@ -119,12 +113,12 @@ a.alignnone {
 }
 
 .alignleft {
-  float:      left;
+  float: left;
   text-align: left;
 }
 
 .alignright {
-  float:      right;
+  float: right;
   text-align: right;
 }
 
@@ -137,7 +131,7 @@ a.alignright {
 img.centered,
 .aligncenter {
   display: block;
-  margin:  0 auto 24px;
+  margin: 0 auto 24px;
 }
 
 img.alignnone,
@@ -158,9 +152,9 @@ img.alignright,
 }
 
 .wp-caption-text {
-  font-size:   14px;
+  font-size: 14px;
   font-weight: 700;
-  text-align:  center;
+  text-align: center;
 }
 
 .entry-content p.wp-caption-text {

@@ -1,22 +1,21 @@
-/* ## Forms
---------------------------------------------- */
+// Forms
 
 input,
 select,
 textarea {
   background-color: $input-background-color;
-  border:           $input-border;
-  color:            $input-text-color;
-  font-size:        $input-text-font-size;
-  font-weight:      $input-text-font-weight;
-  padding:          16px;
-  width:            100%;
+  border: $input-border;
+  color: $input-text-color;
+  font-size: $input-text-font-size;
+  font-weight: $input-text-font-weight;
+  padding: 16px;
+  width: 100%;
 
   &:focus {
     background-color: $input-active-background-color;
-    border:           $input-active-border;
-    color:            $input-active-text-color;
-    outline:          none;
+    border: $input-active-border;
+    color: $input-active-text-color;
+    outline: none;
   }
 }
 
@@ -27,9 +26,9 @@ input[type="radio"] {
 }
 
 ::placeholder {
-  color:       $input-placeholder-text-color;
+  color: $input-placeholder-text-color;
   font-weight: 300;
-  opacity:     1;
+  opacity: 1;
 }
 
 button,
@@ -38,23 +37,23 @@ input[type="reset"],
 input[type="submit"],
 .button {
   background-color: $button-color;
-  border:           none;
-  color:            $button-text-color;
-  cursor:           pointer;
-  font-size:        16px;
-  font-weight:      300;
-  padding:          16px 24px;
-  text-transform:   uppercase;
-  width:            auto;
+  border: 0;
+  color: $button-text-color;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 300;
+  padding: 16px 24px;
+  text-transform: uppercase;
+  width: auto;
 
   .footer-widgets & {
     background-color: $alt-button-color;
-    color:            $alt-button-text-color;
+    color: $alt-button-text-color;
   }
 
   &:hover {
     background-color: $button-active-color;
-    color:            $button-active-text-color;
+    color: $button-active-text-color;
   }
 }
 
@@ -68,7 +67,7 @@ input[type="submit"],
 .footer-widgets input:hover[type="submit"],
 .footer-widgets .button:hover {
   background-color: $alt-button-active-color;
-  color:            $alt-button-active-text-color;
+  color: $alt-button-active-text-color;
 }
 
 .button {

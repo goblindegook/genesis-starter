@@ -1,0 +1,10 @@
+scss_files: 'src/sass/**/*.css.scss'
+
+exclude:
+  - 'src/sass/_normalize.scss'
+
+linters:
+  Comment:
+    exclude:
+      - 'src/sass/_functions.scss'
+      - 'src/sass/_meta.scss'

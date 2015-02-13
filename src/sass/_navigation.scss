@@ -1,11 +1,28 @@
-/* # Site Navigation
----------------------------------------------------------------------------------------------------- */
+// Site Navigation
 
 .genesis-nav-menu {
   clear: both;
   font-size: $menu-font-size;
   line-height: $menu-line-height;
   width: 100%;
+
+  @include susy-breakpoint(max-width $breakpoint-large) {
+    text-align: center;
+
+    li {
+      float: none;
+    }
+
+    a,
+    & > .first > a,
+    & > .last > a {
+      padding: 20px 16px;
+    }
+
+    li.right {
+      display: none;
+    }
+  }
 
   .menu-item {
     display: inline-block;
@@ -15,7 +32,7 @@
       position: static;
     }
 
-    &:hover > .sub-menu {
+    > .sub-menu {
       left: auto;
       opacity: 1;
     }
@@ -44,8 +61,8 @@
     a {
       background-color: $menu-background-color;
       border: $menu-border;
-      border-top: none;
-      font-size: $menu-font-size * 0.9;
+      border-top: 0;
+      font-size: $menu-font-size * .9;
       padding: 20px;
       position: relative;
       width: 200px;
@@ -56,57 +73,44 @@
     }
   }
 
-  & > .first > a {
+  > .first > a {
     padding-left: 0;
   }
 
-  & > .last > a {
+  > .last > a {
     padding-right: 0;
   }
 
-  & > .right {
+  > .right {
     color: $menu-background-color;
     float: right;
     list-style-type: none;
     padding: 30px 0;
   }
 
-  & > .right > a {
+  > .right > a {
     display: inline;
     padding: 0;
   }
 
-  & > .rss > a {
+  > .rss > a {
     margin-left: 48px;
   }
 
-  & > .search {
+  > .search {
     padding: 10px 0 0;
-  }
-
-  @include susy-breakpoint(max-width $breakpoint-large) {
-    text-align: center;
-
-    li {
-      float: none;
-    }
-
-    a,
-    & > .first > a,
-    & > .last > a {
-      padding: 20px 16px;
-    }
-
-    li.right {
-      display: none;
-    }
   }
 }
 
-/* ## Site Header Navigation
---------------------------------------------- */
+// Site Header Navigation
 
 .site-header {
+  @include susy-breakpoint(max-width $breakpoint-large) {
+    ul.genesis-nav-menu {
+      float: none;
+    }
+  }
+
   .sub-menu {
     border-top: $menu-border;
 
@@ -118,16 +122,9 @@
   .genesis-nav-menu li li {
     margin-left: 0;
   }
-
-  @include susy-breakpoint(max-width $breakpoint-large) {
-    ul.genesis-nav-menu {
-      float: none;
-    }
-  }
 }
 
-/* ## Primary Navigation
---------------------------------------------- */
+// Primary Navigation
 
 .nav-primary {
   background-color: $menu-color;
@@ -149,8 +146,7 @@
   }
 }
 
-/* ## Secondary Navigation
---------------------------------------------- */
+// Secondary Navigation
 
 .nav-secondary {
   background-color: $menu-background-color;
