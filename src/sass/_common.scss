@@ -4,19 +4,19 @@
 
 .avatar {
   float: left;
-}
 
-.alignleft .avatar,
-.author-box .avatar {
-  margin-right: 24px;
-}
+  .alignleft &,
+  .author-box & {
+    margin-right: 24px;
+  }
 
-.alignright .avatar {
-  margin-left: 24px;
-}
+  .alignright & {
+    margin-left: 24px;
+  }
 
-.comment .avatar {
-  margin: 0 16px 24px 0;
+  .comment & {
+    margin: 0 16px 24px 0;
+  }
 }
 
 // Genesis
@@ -59,8 +59,8 @@
   width: 50%;
 }
 
-.genesis-nav-menu .search input[type="submit"],
-.widget_search input[type="submit"] {
+.genesis-nav-menu .search [type="submit"],
+.widget_search [type="submit"] {
   border: 0;
   clip: rect(0, 0, 0, 0);
   height: 1px;
@@ -155,10 +155,10 @@ img.alignright,
   font-size: 14px;
   font-weight: 700;
   text-align: center;
-}
 
-.entry-content p.wp-caption-text {
-  margin-bottom: 0;
+  .entry-content & {
+    margin-bottom: 0;
+  }
 }
 
 .sticky {

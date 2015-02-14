@@ -25,14 +25,14 @@
   margin-bottom: 16px;
 }
 
-.enews-widget input[type="submit"] {
+.enews-widget [type="submit"] {
   background-color: #e5554e;
   color: #fff;
   margin: 0;
   width: 100%;
 }
 
-.enews-widget input:hover[type="submit"] {
+.enews-widget :hover[type="submit"] {
   background-color: #fff;
   color: #333;
 }

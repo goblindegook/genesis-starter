@@ -75,11 +75,11 @@
     padding: 0;
   }
 
-  & > .rss > a {
+  > .rss > a {
     margin-left: 48px;
   }
 
-  & > .search {
+  > .search {
     padding: 10px 0 0;
   }
 
@@ -91,8 +91,8 @@
     }
 
     a,
-    & > .first > a,
-    & > .last > a {
+    > .first > a,
+    > .last > a {
       padding: 20px 16px;
     }
 

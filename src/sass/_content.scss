@@ -138,9 +138,9 @@ li.comment {
 }
 
 .comment-respond {
-  input[type="email"],
-  input[type="text"],
-  input[type="url"] {
+  [type="email"],
+  [type="text"],
+  [type="url"] {
     width: 50%;
   }
 
