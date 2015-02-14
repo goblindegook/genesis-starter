@@ -17,11 +17,15 @@ module.exports =
     src: src + '/sass/*.{sass,scss}'
     dest: './'
     settings:
-      includePaths: [
+      sass:        src + '/sass'
+      css:         dest
+      image:       'public/images'
+      debug:       false
+      sourcemap:   debug
+      import_path: [
         node.path 'susy/sass'
+        node.path 'normalize-scss'
       ]
-      sourceComments: do -> 'map' if debug
-      imagePath: 'public/images'
 
   autoprefixer:
     browsers: [ 'last 2 versions' ]
