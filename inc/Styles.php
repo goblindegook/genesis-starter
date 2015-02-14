@@ -20,6 +20,7 @@ class Styles {
 	 */
 	public function ready() {
 		\add_action( 'wp_enqueue_scripts', array( $this, 'enqueue' ) );
+		\add_filter( 'use_default_gallery_style', '\__return_false' );
 	}
 
 	/**

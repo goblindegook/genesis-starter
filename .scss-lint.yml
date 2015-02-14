@@ -8,3 +8,6 @@ linters:
     exclude:
       - 'src/sass/_functions.scss'
       - 'src/sass/_meta.scss'
+  NameFormat:
+    exclude:
+      - 'src/sass/_widgets.scss'
