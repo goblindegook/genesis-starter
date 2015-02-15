@@ -4,7 +4,12 @@
   clear: both;
   font-size: $menu-font-size;
   line-height: $menu-line-height;
+  text-align: center;
   width: 100%;
+
+  @include susy-breakpoint($breakpoint-large) {
+    text-align: left;
+  }
 
   .menu-item {
     display: inline-block;
@@ -12,11 +17,11 @@
 
     &:hover {
       position: static;
-    }
 
-    &:hover > .sub-menu {
-      left: auto;
-      opacity: 1;
+      > .sub-menu {
+        left: auto;
+        opacity: 1;
+      }
     }
   }
 
@@ -45,9 +50,13 @@
       border: $menu-border;
       border-top: 0;
       font-size: $menu-font-size * .9;
-      padding: 20px;
+      padding: 20px 16px;
       position: relative;
       width: 200px;
+
+      @include susy-breakpoint($breakpoint-large) {
+        padding: 20px;
+      }
     }
 
     .sub-menu {
@@ -55,17 +64,37 @@
     }
   }
 
+  .last {
+    float: none;
+    
+    @include susy-breakpoint($breakpoint-large) {
+      float: right;
+    }
+  }
+
   > .first > a {
-    padding-left: 0;
+    @include susy-breakpoint($breakpoint-large) {
+      padding-left: 0;
+    }
   }
 
   > .last > a {
-    padding-right: 0;
+    @include susy-breakpoint($breakpoint-large) {
+      padding-right: 0;
+    }
+  }
+
+  .right {
+    display: none;
+
+    @include susy-breakpoint($breakpoint-large) {
+      display: inline-block;
+      float: right;
+    }
   }
 
   > .right {
     color: $menu-background-color;
-    float: right;
     list-style-type: none;
     padding: 30px 0;
   }
@@ -83,23 +112,6 @@
     padding: 10px 0 0;
   }
 
-  @include susy-breakpoint(max-width $breakpoint-large) {
-    text-align: center;
-
-    li {
-      float: none;
-    }
-
-    a,
-    > .first > a,
-    > .last > a {
-      padding: 20px 16px;
-    }
-
-    li.right {
-      display: none;
-    }
-  }
 }
 
 // Site Header Navigation
@@ -115,12 +127,6 @@
 
   .genesis-nav-menu li li {
     margin-left: 0;
-  }
-
-  @include susy-breakpoint(max-width $breakpoint-large) {
-    ul.genesis-nav-menu {
-      float: none;
-    }
   }
 }
 

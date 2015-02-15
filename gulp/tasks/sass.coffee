@@ -20,4 +20,3 @@ gulp.task 'sass', ['images'], ->
     .pipe gulpIf config.debug, sourcemaps.write()
     .pipe gulp.dest config.sass.dest
     .pipe browserSync.reload { stream: true }
-

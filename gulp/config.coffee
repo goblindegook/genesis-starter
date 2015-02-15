@@ -1,4 +1,4 @@
-node = require './util/node'
+nodePath = require './util/nodePath'
 
 src   = './src'
 dest  = './public'
@@ -20,8 +20,8 @@ module.exports =
       sourceComments: do -> 'map' if debug
       imagePath:      'public/images'
       includePaths:   [
-        node.path 'modularized-normalize-scss'
-        node.path 'susy/sass'
+        nodePath 'modularized-normalize-scss'
+        nodePath 'susy/sass'
       ]
 
   autoprefixer:
