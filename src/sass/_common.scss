@@ -146,7 +146,7 @@ img,
   &.alignleft {
     margin: 0 24px 24px 0;
   }
-  
+
   &.alignright {
     margin: 0 0 24px 24px;
   }
@@ -162,5 +162,6 @@ img,
   }
 }
 
-.sticky {
+.content .sticky {
+  border: 1px solid $color-highlight;
 }
