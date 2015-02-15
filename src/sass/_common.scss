@@ -103,12 +103,7 @@
 
 // WordPress
 
-a.aligncenter img {
-  display: block;
-  margin: 0 auto;
-}
-
-a.alignnone {
+.alignnone {
   display: inline-block;
 }
 
@@ -122,32 +117,39 @@ a.alignnone {
   text-align: right;
 }
 
-a.alignleft,
-a.alignnone,
-a.alignright {
-  max-width: 100%;
-}
-
-img.centered,
+.centered,
 .aligncenter {
   display: block;
   margin: 0 auto 24px;
 }
 
-.alignnone {
-  margin-bottom: 12px;
+.aligncenter img {
+  display: block;
+  margin: 0 auto;
 }
 
-a.alignleft,
-img.alignleft,
-.wp-caption.alignleft {
-  margin: 0 24px 24px 0;
+a {
+  &.alignleft,
+  &.alignnone,
+  &.alignright {
+    max-width: 100%;
+  }
+
+  &.alignnone {
+    margin-bottom: 12px;
+  }
 }
 
-a.alignright,
-img.alignright,
-.wp-caption.alignright {
-  margin: 0 0 24px 24px;
+a,
+img,
+.wp-caption {
+  &.alignleft {
+    margin: 0 24px 24px 0;
+  }
+  
+  &.alignright {
+    margin: 0 0 24px 24px;
+  }
 }
 
 .wp-caption-text {

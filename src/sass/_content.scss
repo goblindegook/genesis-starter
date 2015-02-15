@@ -39,7 +39,7 @@
 
 // Entry Meta
 
-p.entry-meta {
+.entry-meta {
   font-size: 16px;
   margin-bottom: 0;
 }
@@ -76,15 +76,20 @@ p.entry-meta {
 
 .archive-pagination li {
   display: inline;
-}
 
-.archive-pagination li a {
-  background-color: $button-color;
-  color: $button-text-color;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 16px;
-  padding: 8px 12px;
+  a {
+    background-color: $button-color;
+    color: $button-text-color;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 4px;
+    padding: 8px 12px;
+
+    @include susy-breakpoint($breakpoint-medium) {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .archive-pagination li a:hover,
@@ -118,7 +123,7 @@ p.entry-meta {
   font-size: 16px;
 }
 
-li.comment {
+.comment {
   background-color: $body-background-color;
   border: 2px solid #fff;
   border-right: 0;
@@ -128,9 +133,9 @@ li.comment {
   clear: both;
 }
 
-.comment-list li {
+.comment-list .comment {
   margin-top: 24px;
-  padding: 32px;
+  padding: 32px 32px 0 32px;
 
   li {
     margin-right: -32px;
@@ -173,9 +178,5 @@ li.comment {
   .sidebar .widget,
   .site-header {
     padding: 0;
-  }
-
-  .archive-pagination li a {
-    margin-bottom: 4px;
   }
 }
