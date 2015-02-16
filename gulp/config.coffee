@@ -32,9 +32,11 @@ module.exports =
     dest: dest + '/images'
 
   phpunit:
+    watch: '/**/*.php'
     src: './test/phpunit/**/*.test.php'
 
   jasmine:
+    watch: dest + '/**/*.js'
     specs: dest + '/specs.js'
 
   jshint:
