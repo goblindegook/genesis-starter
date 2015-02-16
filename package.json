@@ -1,6 +1,6 @@
 {
   "name": "genesis-starter",
-  "version": "2.1.2",
+  "version": "0.1.0",
   "description": "A Genesis Framework starter theme for WordPress with Gulp support.",
   "repository": {
     "type": "git",
