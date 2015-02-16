@@ -39,7 +39,7 @@
 .footer-widgets-3 {
   @include span(full);
 
-  @include susy-breakpoint($breakpoint-large) {
+  @include susy-breakpoint($breakpoint-l) {
     @include span(4 of 12);
     
   }

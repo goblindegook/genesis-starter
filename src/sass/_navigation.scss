@@ -7,7 +7,7 @@
   text-align: center;
   width: 100%;
 
-  @include susy-breakpoint($breakpoint-large) {
+  @include susy-breakpoint($breakpoint-l) {
     text-align: left;
   }
 
@@ -54,7 +54,7 @@
       position: relative;
       width: 200px;
 
-      @include susy-breakpoint($breakpoint-large) {
+      @include susy-breakpoint($breakpoint-l) {
         padding: 20px;
       }
     }
@@ -67,19 +67,19 @@
   .last {
     float: none;
     
-    @include susy-breakpoint($breakpoint-large) {
+    @include susy-breakpoint($breakpoint-l) {
       float: right;
     }
   }
 
   > .first > a {
-    @include susy-breakpoint($breakpoint-large) {
+    @include susy-breakpoint($breakpoint-l) {
       padding-left: 0;
     }
   }
 
   > .last > a {
-    @include susy-breakpoint($breakpoint-large) {
+    @include susy-breakpoint($breakpoint-l) {
       padding-right: 0;
     }
   }
@@ -87,7 +87,7 @@
   .right {
     display: none;
 
-    @include susy-breakpoint($breakpoint-large) {
+    @include susy-breakpoint($breakpoint-l) {
       display: inline-block;
       float: right;
     }

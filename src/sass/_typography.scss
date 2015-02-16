@@ -1,10 +1,11 @@
 // Typographical Elements
 
 body {
-  background-color: darken($body-background-color, 4%);
+  background-color: $body-background-color;
+  
   color: $body-color;
   font-family: $body-font-family;
-  font-size: $body-font-size;
+  font-size: $body-font-size * .9;
   font-weight: $body-font-weight;
   line-height: $body-line-height;
   margin: 0;
@@ -12,9 +13,9 @@ body {
   word-break: break-word;
   word-wrap: break-word;
 
-  @include susy-breakpoint(max-width $breakpoint-medium) {
-    background-color: $body-background-color;
-    font-size: $body-font-size * .9;
+  @include susy-breakpoint($breakpoint-m) {
+    background-color: darken($body-background-color, 4%);
+    font-size: $body-font-size;
   }
 }
 

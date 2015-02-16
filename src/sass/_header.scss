@@ -6,10 +6,10 @@
   padding: 0;
 
   .wrap {
-    padding: 40px 0;
+    padding: 20px gutter();
 
-    @include susy-breakpoint(max-width $breakpoint-large) {
-      padding: 20px gutter();
+    @include susy-breakpoint($breakpoint-l) {
+      padding: 40px 0;
     }
   }
 }
@@ -17,11 +17,11 @@
 // Title Area
 
 .title-area {
-  @include span(6 of 12);
+  @include span(full);
   padding: 10px 0;
 
-  @include susy-breakpoint(max-width $breakpoint-large) {
-    @include span(full);
+  @include susy-breakpoint($breakpoint-l) {
+    @include span(6 of 12);
   }
 
   .header-full-width & {
@@ -56,6 +56,11 @@
 .site-description,
 .site-title {
   margin-bottom: 0;
+  text-align: center;
+
+  @include susy-breakpoint($breakpoint-l) {
+    text-align: left;
+  }
 
   .header-image & {
     display: block;
@@ -63,21 +68,16 @@
   }
 }
 
-@include susy-breakpoint(max-width $breakpoint-large) {
-  .site-description,
-  .site-header .title-area,
-  .site-header .search-form,
-  .site-title {
-    text-align: center;
-  }
-
+@include susy-breakpoint(max-width $breakpoint-l) {
   .site-header .search-form {
     float: none;
     margin: 16px auto;
+    text-align: center;
   }
 
   .header-image .title-area {
     background-position: center top;
+    text-align: center;
   }
 }
 
@@ -88,7 +88,7 @@
 
   text-align: right;
 
-  @include susy-breakpoint($breakpoint-large) {
+  @include susy-breakpoint($breakpoint-l) {
     @include span(6 of 12 last);
   }
 }

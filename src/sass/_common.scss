@@ -32,7 +32,7 @@
   margin-bottom: 40px;
   padding: 0;
 
-  @include susy-breakpoint($breakpoint-medium) {
+  @include susy-breakpoint($breakpoint-m) {
     padding: 40px;
   }
 }
@@ -167,5 +167,7 @@ img,
 }
 
 .content .sticky {
-  border: 1px solid $color-highlight;
+  @include susy-breakpoint($breakpoint-m) {
+    border: 1px solid $color-highlight;
+  }
 }
