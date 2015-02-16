@@ -30,7 +30,11 @@
   background-color: $body-background-color;
   font-size: 16px;
   margin-bottom: 40px;
-  padding: 40px;
+  padding: 0;
+
+  @include susy-breakpoint($breakpoint-medium) {
+    padding: 40px;
+  }
 }
 
 .author-box-title {

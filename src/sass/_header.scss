@@ -3,6 +3,7 @@
 .site-header {
   background-color: $body-background-color;
   min-height: 160px;
+  padding: 0;
 
   .wrap {
     padding: 40px 0;
@@ -83,10 +84,11 @@
 // Widget Area
 
 .site-header .widget-area {
-  @include span(6 of 12 last);
+  @include span(full);
+
   text-align: right;
 
-  @include susy-breakpoint(max-width $breakpoint-large) {
-    @include span(full);
+  @include susy-breakpoint($breakpoint-large) {
+    @include span(6 of 12 last);
   }
 }
