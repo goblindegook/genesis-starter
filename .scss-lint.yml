@@ -1,0 +1,10 @@
+scss_files: 'src/sass/**/*.scss'
+
+linters:
+  Comment:
+    exclude:
+      - 'src/sass/_functions.scss'
+      - 'src/sass/_meta.scss'
+  NameFormat:
+    exclude:
+      - 'src/sass/_widgets.scss'

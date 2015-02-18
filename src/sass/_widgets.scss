@@ -1,40 +1,39 @@
-/* # Widgets
----------------------------------------------------------------------------------------------------- */
+// Widgets
 
 .widget {
   word-wrap: break-word;
 
   ol > li {
     list-style-position: inside;
-    list-style-type:     decimal;
-    padding-left:        20px;
-    text-indent:         -20px;
+    list-style-type: decimal;
+    padding-left: 20px;
+    text-indent: -20px;
   }
 
   li li {
-    border: none;
+    border: 0;
     margin: 0 0 0 30px;
     padding: 0;
   }
 }
 
-.widget_calendar{
+.widget_calendar {
   table {
     width: 100%;
   }
 
-  td, th {
+  td,
+  th {
     text-align: center;
   }
 }
 
-/* ## Featured Content
---------------------------------------------- */
+// Featured Content
 
 .featured-content .entry {
   border-bottom: 2px solid #f5f5f5;
   margin-bottom: 20px;
-  padding:       0 0 24px;
+  padding: 0 0 24px;
 }
 
 .footer-widgets .entry {

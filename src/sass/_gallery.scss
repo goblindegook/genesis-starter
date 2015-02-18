@@ -1,8 +1,17 @@
-/* ## Gallery
---------------------------------------------- */
+// Gallery
 
 .gallery {
   overflow: hidden;
+
+  img {
+    border: 1px solid #ddd;
+    height: auto;
+    padding: 4px;
+
+    &:hover {
+      border: 1px solid #999;
+    }
+  }
 }
 
 .gallery-item {
@@ -19,13 +28,3 @@
 .gallery-columns-7 .gallery-item { @include gallery(1 of 7); }
 .gallery-columns-8 .gallery-item { @include gallery(1 of 8); }
 .gallery-columns-9 .gallery-item { @include gallery(1 of 9); }
-
-.gallery img {
-  border: 1px solid #ddd;
-  height: auto;
-  padding: 4px;
-}
-
-.gallery img:hover {
-  border: 1px solid #999;
-}

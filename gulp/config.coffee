@@ -1,8 +1,9 @@
-node    = require './util/node'
-bourbon = require 'node-bourbon'
+nodePath = require './util/nodePath'
 
+host  = 'local.wordpress.dev'
 src   = './src'
 dest  = './public'
+test  = './test'
 debug = true
 
 module.exports =
@@ -15,14 +16,15 @@ module.exports =
     debug: debug
 
   sass:
-    src: src + '/sass/*.{sass,scss}'
-    dest: './'
-    settings:
-      includePaths: bourbon.with [
-        node.path 'susy/sass'
-      ]
+    src:      src + '/sass/*.{sass,scss}'
+    dest:     './'
+    settings: 
       sourceComments: do -> 'map' if debug
-      imagePath: 'public/images'
+      imagePath:      'public/images'
+      includePaths:   [
+        nodePath 'modularized-normalize-scss'
+        nodePath 'susy/sass'
+      ]
 
   autoprefixer:
     browsers: [ 'last 2 versions' ]
@@ -32,9 +34,11 @@ module.exports =
     dest: dest + '/images'
 
   phpunit:
-    src: './test/phpunit/**/*.test.php'
+    watch: '/**/*.php'
+    src:   test + '/phpunit/**/*.test.php'
 
   jasmine:
+    watch: dest + '/**/*.js'
     specs: dest + '/specs.js'
 
   jshint:
@@ -42,11 +46,12 @@ module.exports =
     reporter: 'jshint-stylish'
 
   browserSync:
-    proxy: 'local.wordpress.dev'
+    proxy: host
     files: [
       '**/*.php'
       dest + '/**'
-      '!' + dest + '/**.map' # Exclude sourcemaps
+      '!' + dest + '/**/*.map' # Exclude sourcemaps
+      '!' + test + '/**/*.php' # Exclude PHPUnit tests
     ]
 
   browserify:
@@ -69,7 +74,7 @@ module.exports =
       dest: dest
       outputName: 'head.js'
     ,
-      entries: './test/jasmine/**/*.spec.{js,coffee}'
+      entries: test + '/jasmine/**/*.spec.{js,coffee}'
       dest: dest
       outputName: 'specs.js'
     ]
