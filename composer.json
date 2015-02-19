@@ -13,7 +13,7 @@
     "license": "GPL-2.0+",
     "autoload": {
       "psr-4": {
-        "goblindegook\\WP\\Theme\\Genesis_Starter\\": "inc/"
+        "goblindegook\\WP\\Theme\\Genesis_Starter\\": "lib/"
       }
     },
     "require": {
