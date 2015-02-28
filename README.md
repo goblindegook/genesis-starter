@@ -11,6 +11,8 @@ A Genesis Framework starter theme with Gulp support.  I took StudioPress' origin
 * [Gulp](http://gulpjs.com/)
 * [Browserify](http://browserify.org/)
 * [Sass](http://sass-lang.com/)
+* [scss-lint](https://github.com/causes/scss-lint)
+* [GraphicsMagick](http://www.graphicsmagick.org/) (for `gulp-unretina`)
 
 ## Setup
 
@@ -36,20 +38,21 @@ The Browserify build process handles CoffeeScript transparently, so you can code
 
 The Genesis starter provides the following Gulp tasks.
 
-| Task          | Description                                        |
-| ------------- | -------------------------------------------------- |
-| `browserify`  | Packages JavaScript bundles from their sources.    |
-| `browserSync` | Not yet working.                                   |
-| `build`       | Runs `browserify`, `sass` and `images`.            |
-| `clean`       | Deletes the built assets so you can start afresh.  |
-| `default`     | Runs `watch`.                                      |
-| `images`      | Copies and compresses image assets.                |
-| `jasmine`     | Runs Jasmine specs.                                |
-| `jshint`      | Lints your JavaScript code.                        |
-| `phpunit`     | Runs PHPUnit test cases.                           |
-| `sass`        | Compiles, minifies and concatenates CSS from Sass. |
-| `test`        | Runs `jasmine` and `phpunit`.                      |
-| `watch`       | Watches files for changes and rebuilds assets.     |
+| Task          | Description                                             |
+| ------------- | ------------------------------------------------------- |
+| `browserify`  | Packages JavaScript bundles from their sources.         |
+| `browserSync` | Not yet working.                                        |
+| `build`       | Runs `browserify`, `sass` and `images`.                 |
+| `clean`       | Deletes the built assets so you can start afresh.       |
+| `default`     | Runs `watch`.                                           |
+| `images`      | Copies and compresses image assets.                     |
+| `unretina`    | Generates smaller images from their `@2x` counterparts. |
+| `jasmine`     | Runs Jasmine specs.                                     |
+| `jshint`      | Lints your JavaScript code.                             |
+| `phpunit`     | Runs PHPUnit test cases.                                |
+| `sass`        | Compiles, minifies and concatenates CSS from Sass.      |
+| `test`        | Runs `jasmine` and `phpunit`.                           |
+| `watch`       | Watches files for changes and rebuilds assets.          |
 
 Task parameters may be configured via the _gulp/config.coffee_ file.
 
