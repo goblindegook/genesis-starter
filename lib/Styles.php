@@ -6,8 +6,6 @@ class Styles {
 
 	private $base_uri;
 
-	private $google_fonts_uri = '//fonts.googleapis.com/css?family=';
-
 	/**
 	 * Constructor.
 	 */
@@ -29,11 +27,7 @@ class Styles {
 	 * Fired on `wp_enqueue_scripts`.
 	 */
 	public function enqueue() {
-		$font_family = 'Lato:300,400,700';
-
 		\add_editor_style();
-		\add_editor_style( $this->google_fonts_uri . urlencode( $font_family ) );
-		\wp_enqueue_style( 'google-fonts', $this->google_fonts_uri . $font_family, array(), CHILD_THEME_VERSION );
 	}
 
 }
