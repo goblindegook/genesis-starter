@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file. This projec
 - **[Added]** Gulp asset building pipeline.
 - **[Added]** Genesis sample theme styles adapted for SCSS.
 - **[Added]** Susy 2.0 grid system.
+- **[Added]** Web Font Loader library support.
 - **[Added]** JavaScript asset building and optimization via Browserify.
 - **[Added]** CoffeeScript support for client-side logic.
 - **[Added]** Support for JavaScript modules installed via NPM.

@@ -9,18 +9,22 @@
   "browser": {},
   "browserify": {
     "transform": [
+      "coffeeify",
       "browserify-data",
       "browserify-shim",
-      "coffeeify",
       "aliasify"
     ]
   },
   "aliasify": {
     "aliases": {
+      "app": "./src/scripts/app",
+      "shim": "./src/scripts/shim",
       "underscore": "lodash"
     }
   },
-  "browserify-shim": {},
+  "browserify-shim": {
+    "jquery": "global:jQuery"
+  },
   "devDependencies": {
     "aliasify": "^1.5.1",
     "browser-sync": "~2.0.1",

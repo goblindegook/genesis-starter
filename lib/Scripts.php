@@ -34,7 +34,7 @@ class Scripts {
 
 		\wp_enqueue_script( 'genesis-starter-infrastructure',
 			$this->base_uri . 'infrastructure.js',
-			array(),
+			array( 'jquery' ),
 			CHILD_THEME_VERSION, true );
 
 		\wp_enqueue_script( 'genesis-starter-app',
