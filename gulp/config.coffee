@@ -16,7 +16,7 @@ module.exports =
     debug: debug
 
   sass:
-    src:      src + '/sass/*.{sass,scss}'
+    src:      src + '/styles/*.{sass,scss}'
     dest:     './'
     settings: 
       sourceComments: do -> 'map' if debug
