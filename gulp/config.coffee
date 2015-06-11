@@ -32,6 +32,17 @@ module.exports =
   images:
     src: src + '/images/**'
     dest: dest + '/images'
+    settings:
+      svgoPlugins: [
+        cleanupIDs: false
+      ,
+        removeUnknownsAndDefaults:
+          SVGid: false
+      ]
+
+  svgSprite:
+    mode:
+      symbol: true
 
   phpunit:
     watch: '/**/*.php'

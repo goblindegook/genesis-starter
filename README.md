@@ -46,7 +46,6 @@ The Genesis starter provides the following Gulp tasks.
 | `clean`       | Deletes the built assets so you can start afresh.       |
 | `default`     | Runs `watch`.                                           |
 | `images`      | Copies and compresses image assets.                     |
-| `unretina`    | Generates smaller images from their `@2x` counterparts. |
 | `jasmine`     | Runs Jasmine specs.                                     |
 | `jshint`      | Lints your JavaScript code.                             |
 | `phpunit`     | Runs PHPUnit test cases.                                |

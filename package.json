@@ -41,6 +41,7 @@
     "gulp-changed": "^1.1.1",
     "gulp-coffeelint": "^0.4.0",
     "gulp-compass": "^2.0.3",
+    "gulp-filter": "^2.0.2",
     "gulp-if": "^1.2.5",
     "gulp-imagemin": "^0.6.2",
     "gulp-jasmine-phantom": "^1.1.1",
@@ -53,6 +54,7 @@
     "gulp-sass": "^1.3.3",
     "gulp-scss-lint": "^0.1.7",
     "gulp-sourcemaps": "^1.2.8",
+    "gulp-svg-sprite": "^1.2.3",
     "gulp-unretina": "^0.1.2",
     "gulp-util": "^3.0.0",
     "jasmine": "^2.1.1",
@@ -66,6 +68,7 @@
     "sinon": "^1.12.2",
     "susy": "^2.2.2",
     "uglifyify": "^2.6.0",
+    "vinyl": "^0.4.6",
     "vinyl-source-stream": "~0.1.1",
     "watchify": "~2.2.1"
   },
