@@ -8,11 +8,6 @@ dest  = './public'
 test  = './test'
 debug = hasFlag 'debug'
 
-if debug
-  log colors.green "Building for development."
-else
-  log colors.green "Building for deployment."
-
 module.exports =
 
   src: src
@@ -25,7 +20,7 @@ module.exports =
   sass:
     src:      src + '/styles/*.{sass,scss}'
     dest:     './'
-    settings: 
+    settings:
       sourceComments: do -> 'map' if debug
       imagePath:      'public/images'
       includePaths:   [
@@ -48,38 +43,47 @@ module.exports =
       ]
 
   svgSprite:
+    svg:
+      rootAttributes:
+        height: 0
+        width: 0
+        style: 'position:absolute'
     mode:
-      symbol: true
+      symbol:
+        sprite: 'sprites.svg'
+
+  eslint:
+    src: src + '/scripts/**/*.{js,jsx}'
 
   phpunit:
     watch: '/**/*.php'
     src:   test + '/phpunit/**/*.test.php'
 
-  jasmine:
-    watch: dest + '/**/*.js'
-    specs: dest + '/specs.js'
+  tape:
+    watch: '**/*.{js,jsx}'
+    src:   test + '/tape/**/*.js'
 
-  jshint:
-    src:      src + '/scripts/**/*.js'
-    reporter: 'jshint-stylish'
+  eslint:
+    src: src + '/scripts/**/*.{js,jsx}'
 
   browserSync:
     proxy: host
     files: [
+      '*.css'
       '**/*.php'
       dest + '/**'
-      '!' + dest + '/**/*.map' # Exclude sourcemaps
+      '!**/*.map' # Exclude sourcemaps
       '!' + test + '/**/*.php' # Exclude PHPUnit tests
     ]
 
   browserify:
     debug: debug,
     # Additional file extentions to make optional
-    extensions: ['.coffee', '.cson', '.yaml', '.json', '.hbs', '.dust']
+    extensions: ['.jsx', '.coffee', '.cson', '.yaml', '.json', '.hbs', '.dust']
     # A separate bundle will be generated for each
     # bundle config in the list below
     bundleConfigs: [
-      entries: src + '/scripts/app.coffee'
+      entries: src + '/scripts/app.js'
       dest: dest
       outputName: 'app.js'
       vendor: false
@@ -88,11 +92,11 @@ module.exports =
       outputName: 'infrastructure.js'
       vendor: true
     ,
-      entries: src + '/scripts/head.coffee'
+      entries: src + '/scripts/head.js'
       dest: dest
       outputName: 'head.js'
     ,
-      entries: test + '/jasmine/**/*.spec.{js,coffee}'
+      entries: src + '/scripts/inline.js'
       dest: dest
-      outputName: 'specs.js'
+      outputName: 'inline.js'
     ]

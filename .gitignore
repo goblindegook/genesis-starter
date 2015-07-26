@@ -1,7 +1,6 @@
 .DS_Store
 .sass-cache/
-/node_modules
-/public
-/editor-style.css
-/style.css
+/node_modules/
+/public/
+/*.css
 /vendor/

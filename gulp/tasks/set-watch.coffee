@@ -1,4 +1,4 @@
 gulp = require 'gulp'
 
-gulp.task 'setWatch', ->
+gulp.task 'set-watch', ->
   global.isWatching = true

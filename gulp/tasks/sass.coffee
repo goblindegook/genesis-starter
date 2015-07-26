@@ -6,7 +6,7 @@ sass         = require 'gulp-sass'
 scssLint     = require 'gulp-scss-lint'
 sourcemaps   = require 'gulp-sourcemaps'
 autoprefixer = require 'gulp-autoprefixer'
-handleErrors = require '../util/handleErrors'
+handleErrors = require '../util/handle-errors'
 config       = require '../config'
 
 gulp.task 'sass', ['images'], ->

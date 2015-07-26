@@ -6,9 +6,9 @@
 gulp   = require 'gulp'
 config = require '../config'
 
-gulp.task 'watch', ['setWatch', 'browserSync'], ->
+gulp.task 'watch', ['set-watch', 'browser-sync'], ->
   gulp.watch config.sass.src,      ['sass']
   gulp.watch config.images.src,    ['images']
-  gulp.watch config.jshint.src,    ['jshint']
+  gulp.watch config.eslint.src,    ['eslint']
   gulp.watch config.phpunit.watch, ['phpunit']
-  gulp.watch config.jasmine.watch, ['jasmine']
+  gulp.watch config.tape.watch,    ['tape']

@@ -15,8 +15,8 @@ browserify   = require 'browserify'
 source       = require 'vinyl-source-stream'
 watchify     = require 'watchify'
 config       = require '../config'
-bundleLogger = require '../util/bundleLogger'
-handleErrors = require '../util/handleErrors'
+bundleLogger = require '../util/bundle-logger'
+handleErrors = require '../util/handle-errors'
 dependencies = (require '../../package.json').dependencies
 
 gulp.task 'browserify', (callback) ->
