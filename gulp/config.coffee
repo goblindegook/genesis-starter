@@ -1,10 +1,17 @@
-nodePath = require './util/nodePath'
+{log, colors}     = require 'gulp-util'
+hasFlag           = require 'has-flag'
+findupNodeModules = require 'findup-node-modules'
 
 host  = 'local.wordpress.dev'
 src   = './src'
 dest  = './public'
 test  = './test'
-debug = true
+debug = hasFlag 'debug'
+
+if debug
+  log colors.green "Building for development."
+else
+  log colors.green "Building for deployment."
 
 module.exports =
 
@@ -22,8 +29,8 @@ module.exports =
       sourceComments: do -> 'map' if debug
       imagePath:      'public/images'
       includePaths:   [
-        nodePath 'modularized-normalize-scss'
-        nodePath 'susy/sass'
+        findupNodeModules 'modularized-normalize-scss'
+        findupNodeModules 'susy/sass'
       ]
 
   autoprefixer:
