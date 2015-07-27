@@ -73,6 +73,5 @@
     "watchify": "~2.2.1"
   },
   "dependencies": {
-    "webfontloader": "^1.5.15"
   }
 }
