@@ -44,7 +44,7 @@
     "gulp-cached": "^1.1.0",
     "gulp-changed": "^1.2.1",
     "gulp-eslint": "^0.15.0",
-    "gulp-filter": "^2.0.2",
+    "gulp-filter": "^3.0.0",
     "gulp-if": "^1.2.5",
     "gulp-imagemin": "^0.6.2",
     "gulp-minify-css": "^0.3.13",
