@@ -12,19 +12,17 @@ gulp.task 'images', ->
 
   gulp.src config.images.src
     .pipe plumber()
-    .pipe imagemin config.images.settings
-    .pipe gulp.dest config.images.dest
+
+    # Generate standard density images from Retina
+    .pipe filterRetina
+      .pipe gulp.dest config.images.dest
+      .pipe unretina()
+      .pipe filterRetina.restore
 
     # Generate SVG sprites
     .pipe filterSvg
       .pipe svgSprite config.svgSprite
-      .pipe imagemin config.images.settings
-      .pipe gulp.dest config.images.dest
       .pipe filterSvg.restore
 
-    # Generate standard density images from Retina
-    .pipe filterRetina
-      .pipe unretina()
-      .pipe imagemin config.images.settings
-      .pipe gulp.dest config.images.dest
-      .pipe filterRetina.restore
+    .pipe imagemin config.images.settings
+    .pipe gulp.dest config.images.dest
