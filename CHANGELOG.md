@@ -2,8 +2,8 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
-## 0.1.0 – Unreleased
-- Initial release, based on the Genesis sample theme (version 2.1.2) by StudioPress.
+## [1.0.0] – September 8, 2015
+- Initial release, based on the Genesis sample theme (version 2.2.0) by StudioPress.
 - **[Added]** Gulp asset building pipeline.
 - **[Added]** Genesis sample theme styles adapted for SCSS.
 - **[Added]** Susy 2.0 grid system.
@@ -15,3 +15,6 @@ All notable changes to this project will be documented in this file. This projec
 - **[Added]** PHPUnit and Tape testing frameworks.
 - **[Added]** Linter support for JavaScript and SCSS.
 - **[Added]** BrowserSync support.
+
+[unreleased]: https://github.com/goblindegook/genesis-starter/compare/1.0.0...HEAD
+[1.1.0]: https://github.com/goblindegook/genesis-starter/compare/1.0.0...1.1.0

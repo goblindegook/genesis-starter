@@ -1,11 +1,19 @@
 <?php
 
-namespace goblindegook\WP\Theme\Genesis_Starter;
+namespace Genesis_Starter;
 
 class Scripts {
 
+	/**
+	 * Base URL for public assets.
+	 * @var string
+	 */
 	private $base_uri;
 
+	/**
+	 * List of CSS assets to cache in localStorage.
+	 * @var array
+	 */
 	private $cached_styles;
 
 	/**

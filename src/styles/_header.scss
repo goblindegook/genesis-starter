@@ -37,6 +37,7 @@
   a,
   a:hover {
     color: #333;
+    text-decoration: none;
   }
 
   .header-image & > a {
@@ -64,7 +65,7 @@
 
   .header-image & {
     display: block;
-    text-indent: -9999px;    
+    text-indent: -9999px;
   }
 }
 

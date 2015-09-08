@@ -1,6 +1,6 @@
 <?php
 
-namespace goblindegook\WP\Theme\Genesis_Starter;
+namespace Genesis_Starter;
 
 class Styles {
 
