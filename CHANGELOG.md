@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [1.0.0] – September 8, 2015
+## 1.0.0 – September 8, 2015
 - Initial release, based on the Genesis sample theme (version 2.2.0) by StudioPress.
 - **[Added]** Gulp asset building pipeline.
 - **[Added]** Genesis sample theme styles adapted for SCSS.
