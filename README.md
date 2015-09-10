@@ -52,13 +52,13 @@ The Genesis starter provides the following Gulp tasks.
 | `sass`         | Compiles, minifies and concatenates CSS from Sass.       |
 | `tape`         | Runs Tape tests.                                         |
 
-Task parameters may be configured via the _gulp/config.coffee_ file.
+Task parameters may be configured via the _gulp/config.js_ file.
 
 ## BrowserSync
 
 The `watch` task uses BrowserSync to observe files, automate browser refreshes and allow synchronised testing between different devices on the same site.
 
-In order to do this, BrowserSync creates a local proxy that channels connections to the development site defined in the `browserSync.proxy` entry of _gulp/config.coffee_.
+In order to do this, BrowserSync creates a local proxy that channels connections to the development site defined in the `browserSync.proxy` entry of _gulp/config.js_.
 
 The proxy configuration requires that your WordPress site be available from multiple domain or host names, a feature offered by a plugin such as [WP Hydra](https://wordpress.org/plugins/wp-hydra/). (I recommend that you use these plugins for _development only_, since activating them on a public site could severely affect your site's search rankings.)
 
