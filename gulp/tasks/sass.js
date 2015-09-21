@@ -2,6 +2,7 @@ import gulp from 'gulp';
 import browserSync from 'browser-sync';
 import gulpIf from 'gulp-if';
 import minifyCss from 'gulp-minify-css';
+import plumber from 'gulp-plumber';
 import sass from 'gulp-sass';
 import scssLint from 'gulp-scss-lint';
 import sourcemaps from 'gulp-sourcemaps';
@@ -11,6 +12,7 @@ import config from '../config';
 
 gulp.task('sass', ['images'], () =>
   gulp.src(config.sass.src)
+    .pipe(plumber())
     .pipe(gulpIf(config.debug, sourcemaps.init()))
     .pipe(scssLint())
     .pipe(sass(config.sass.settings))
