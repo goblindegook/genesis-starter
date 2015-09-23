@@ -35,7 +35,8 @@ export default {
       svgoPlugins: [
         {
           cleanupIDs: false
-        }, {
+        },
+        {
           removeUnknownsAndDefaults: {
             SVGid: false
           }
@@ -47,8 +48,8 @@ export default {
     svg: {
       rootAttributes: {
         height: 0,
-        width: 0,
-        style: 'position:absolute'
+        width:  0,
+        style:  'position: absolute'
       }
     },
     mode: {
