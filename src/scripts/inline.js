@@ -1,4 +1,4 @@
-import cssCache from 'modules/css-cache';
+import cssCache from './modules/css-cache';
 
 const cachedStyles = window.cachedStyles || {};
 

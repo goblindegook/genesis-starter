@@ -65,8 +65,10 @@ export default {
     watch: '/**/*.php',
     src: test + '/phpunit/**/*.test.php'
   },
+  ava: {
+    src: test + '/ava/**/*.js'
+  },
   tape: {
-    watch: '**/*.{js,jsx}',
     src: test + '/tape/**/*.js'
   },
   browserSync: {

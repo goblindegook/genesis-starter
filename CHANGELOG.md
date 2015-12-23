@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [unreleased]
+- **[IN PROGRESS]** Support for Hot Module Replacement with Browserify.
+- **[Added]** Tape test reporter with `faucet`.
+- **[Changed]** Babel 6 with ES2015, React and Stage 3 support.
+- **[Changed]** ESLint uses Airbnb presets with support for Babel and React.
+
 ## 1.0.0 – September 8, 2015
 - Initial release, based on the Genesis sample theme (version 2.2.0) by StudioPress.
 - **[Added]** Gulp asset building pipeline.
