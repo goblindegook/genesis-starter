@@ -68,9 +68,6 @@ export default {
   ava: {
     src: test + '/ava/**/*.js'
   },
-  tape: {
-    src: test + '/tape/**/*.js'
-  },
   browserSync: {
     proxy: host,
     files: [

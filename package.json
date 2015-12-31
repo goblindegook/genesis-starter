@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "aliasify": "^1.5.1",
+    "ava": "^0.9.1",
     "babel-core": "^6.3.17",
     "babel-eslint": "^5.0.0-beta6",
     "babel-plugin-react-transform": "^2.0.0-beta",
@@ -50,6 +51,7 @@
     "glob": "^4.3.2",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.0.0",
+    "gulp-ava": "^0.5.1",
     "gulp-cached": "^1.1.0",
     "gulp-changed": "^1.2.1",
     "gulp-eslint": "^1.1.1",
