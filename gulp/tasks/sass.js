@@ -1,7 +1,7 @@
 import gulp from 'gulp';
 import browserSync from 'browser-sync';
 import gulpIf from 'gulp-if';
-import minifyCss from 'gulp-minify-css';
+import nano from 'gulp-cssnano';
 import plumber from 'gulp-plumber';
 import sass from 'gulp-sass';
 import scssLint from 'gulp-scss-lint';
@@ -13,15 +13,13 @@ import config from '../config';
 gulp.task('sass', ['images'], () =>
   gulp.src(config.sass.src)
     .pipe(plumber())
-    .pipe(gulpIf(config.debug, sourcemaps.init()))
+    .pipe(gulpIf(config.environment.debug, sourcemaps.init()))
     .pipe(scssLint())
     .pipe(sass(config.sass.settings))
     .on('error', handleErrors)
     .pipe(autoprefixer(config.autoprefixer))
-    .pipe(minifyCss({
-      keepSpecialComments: '*'
-    }))
-    .pipe(gulpIf(config.debug, sourcemaps.write()))
+    .pipe(nano())
+    .pipe(gulpIf(config.environment.debug, sourcemaps.write()))
     .pipe(gulp.dest(config.sass.dest))
     .pipe(browserSync.reload({
       stream: true

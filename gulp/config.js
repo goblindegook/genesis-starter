@@ -14,7 +14,11 @@ export default {
     debug
   },
   sass: {
-    src: src + '/styles/*.{sass,scss}',
+    src: [
+      src + '/styles/**/*.{sass,scss}',
+      '!' + src + '/styles/fonts.{sass,scss}',
+      '!' + src + '/styles/fonts/**/*.{sass,scss}',
+    ],
     dest: './',
     settings: {
       sourceComments: debug ? 'map' : null,
@@ -27,6 +31,13 @@ export default {
   },
   autoprefixer: {
     browsers: ['last 2 versions']
+  },
+  fonts: {
+    src: [
+      src + '/styles/fonts.scss',
+      src + '/styles/fonts/**/*.scss',
+    ],
+    dest: './',
   },
   images: {
     src: src + '/images/**',
