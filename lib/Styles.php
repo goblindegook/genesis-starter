@@ -20,7 +20,7 @@ class Styles {
 	 */
 	public function admin_init() {
 		\add_editor_style( 'editor-style.css' );
-		\add_editor_style( 'fonts.css' );
+		\add_editor_style( 'public/fonts.css' );
 	}
 
 	/**

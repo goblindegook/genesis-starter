@@ -41,16 +41,17 @@ The Genesis starter provides the following Gulp tasks.
 | Task           | Description                                              |
 | -------------- | -------------------------------------------------------- |
 | `watch`        | Watches files for changes and rebuilds assets (default). |
-| `build`        | Runs `browserify`, `sass` and `images`.                  |
-| `test`         | Runs `tape` and `phpunit`.                               |
+| `build`        | Runs `browserify`, `fonts`, `sass` and `images`.         |
+| `test`         | Runs `ava` and `phpunit`.                                |
 | `clean`        | Deletes the built assets so you can start afresh.        |
+| `ava`          | Runs AVA tests.                                          |
 | `browser-sync` | Reloads and syncs browsers on multiple devices.          |
 | `browserify`   | Packages JavaScript bundles from their sources.          |
 | `eslint`       | Lints your JavaScript code.                              |
+| `fonts`        | Converts web fonts to CSS for `localStorage` caching.    |
 | `images`       | Copies and compresses image assets.                      |
 | `phpunit`      | Runs PHPUnit test cases.                                 |
 | `sass`         | Compiles, minifies and concatenates CSS from Sass.       |
-| `tape`         | Runs Tape tests.                                         |
 
 Task parameters may be configured via the _gulp/config.js_ file.
 

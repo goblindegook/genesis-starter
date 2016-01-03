@@ -14,11 +14,7 @@ export default {
     debug
   },
   sass: {
-    src: [
-      src + '/styles/**/*.{sass,scss}',
-      '!' + src + '/styles/fonts.{sass,scss}',
-      '!' + src + '/styles/fonts/**/*.{sass,scss}',
-    ],
+    src: src + '/styles/**/*.{sass,scss}',
     dest: './',
     settings: {
       sourceComments: debug ? 'map' : null,
@@ -33,11 +29,9 @@ export default {
     browsers: ['last 2 versions']
   },
   fonts: {
-    src: [
-      src + '/styles/fonts.scss',
-      src + '/styles/fonts/**/*.scss',
-    ],
-    dest: './',
+    src: src + '/fonts/**/*.{ttf,woff,woff2}',
+    out: 'fonts.css',
+    dest,
   },
   images: {
     src: src + '/images/**',

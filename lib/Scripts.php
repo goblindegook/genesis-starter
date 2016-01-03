@@ -23,7 +23,7 @@ class Scripts {
 		$this->base_uri = \get_stylesheet_directory_uri() . '/public/';
 
 		$this->cached_styles = array(
-			'fonts' => \get_stylesheet_directory_uri() . '/fonts.css?version=' . CHILD_THEME_VERSION,
+			'fonts' => $this->base_uri . 'fonts.css?version=' . CHILD_THEME_VERSION,
 		);
 	}
 
@@ -86,6 +86,12 @@ class Scripts {
 			var cachedStyles = <?php echo json_encode( $this->cached_styles ); ?>;
 			<?php include dirname( __DIR__ ) . '/public/inline.js'; ?>
 		</script>
+		<noscript>
+			<?php foreach ( $this->cached_styles as $href ) { ?>
+				<link rel="stylesheet" type="text/css" media="all"
+					href="<?php echo esc_url( $href ) ?>">
+			<?php } ?>
+		</noscript>
 		<!--/noptimize-->
 		<?php
 	}
