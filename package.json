@@ -21,6 +21,15 @@
       "underscore": "lodash"
     }
   },
+  "ava": {
+    "files": [
+      "test/ava/**/*.js"
+    ],
+    "verbose": true,
+    "require": [
+      "babel-core/register"
+    ]
+  },
   "browserify-shim": {
     "jquery": "global:jQuery"
   },
