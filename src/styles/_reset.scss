@@ -22,13 +22,13 @@ input[type="search"] {
 .site-header,
 .site-inner,
 .wrap {
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     content: ' ';
-    display: table;    
+    display: table;
   }
 
-  &:after {
+  &::after {
     clear: both;
   }
 }

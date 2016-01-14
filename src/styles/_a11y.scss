@@ -12,7 +12,7 @@
 .screen-reader-text:focus,
 .screen-reader-shortcut:focus,
 .genesis-nav-menu .search input[type="submit"]:focus,
-.widget_search input[type="submit"]:focus  {
+.widget_search input[type="submit"]:focus {
   clip: auto !important;
   height: auto;
   width: auto;
@@ -24,7 +24,7 @@
   background: #fff;
   z-index: 100000; // above WP toolbar
   text-decoration: none;
-  box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, .6);
 }
 
 .more-link {
@@ -38,27 +38,28 @@
     position: static;
   }
 
-  & > a:focus + ul.sub-menu,
+  > a:focus + ul.sub-menu,
   &.sfHover > ul.sub-menu {
-   left: auto;
-   opacity: 1;
+    left: auto;
+    opacity: 1;
   }
 }
 
 // Skip links
 
 .genesis-skip-link {
- margin: 0;
+  margin: 0;
+
+  li {
+    height: 0;
+    width: 0;
+    list-style: none;
+  }
 }
 
-.genesis-skip-link li {
- height: 0;
- width: 0;
- list-style: none;
-}
+// Display outline on focus
 
-/* Display outline on focus */
 :focus {
- color: #333;
- outline: #ccc solid 1px;
+  color: #333;
+  outline: #ccc solid 1px;
 }

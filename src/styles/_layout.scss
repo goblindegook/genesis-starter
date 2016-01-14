@@ -38,7 +38,7 @@
 
 .content-sidebar {
   @include susy-breakpoint($breakpoint-l) {
-    .content-sidebar-wrap { 
+    .content-sidebar-wrap {
       .content { @include span(8 of 12); }
       .sidebar-primary { @include span(4 of 12 last); }
     }
@@ -47,7 +47,7 @@
 
 .sidebar-content {
   @include susy-breakpoint($breakpoint-l) {
-    .content-sidebar-wrap { 
+    .content-sidebar-wrap {
       .sidebar-primary { @include span(4 of 12); }
       .content { @include span(8 of 12 last); }
     }

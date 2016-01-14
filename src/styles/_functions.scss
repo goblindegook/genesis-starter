@@ -6,16 +6,16 @@
  */
 @function power ($b, $n) {
   $result: 1;
-  
+
   @if $n >= 0 {
     @for $i from 1 through $n {
       $result: $result * $b;
-    } 
+    }
   } @else {
     @for $i from $n to 0 {
       $result: $result / $b;
     }
   }
-  
+
   @return $result;
 }
