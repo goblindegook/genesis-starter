@@ -37,11 +37,14 @@ define( 'CHILD_THEME_VERSION', '1.0.0' );
 
 //* Setup theme
 \add_action( 'after_setup_theme', function () {
-	$scripts    = new \Genesis_Starter\Scripts();
-	$styles     = new \Genesis_Starter\Styles();
-	$shortcodes = new \Genesis_Starter\Shortcodes();
+	$components = array(
+        'markup'     => new \Genesis_Starter\Markup(),
+        'scripts'    => new \Genesis_Starter\Scripts(),
+        'styles'     => new \Genesis_Starter\Styles(),
+        'shortcodes' => new \Genesis_Starter\Shortcodes(),
+	);
 
-	$scripts->ready();
-	$styles->ready();
-	$shortcodes->ready();
+	foreach ( $components as &$component ) {
+		$component->ready();
+	}
 } );
