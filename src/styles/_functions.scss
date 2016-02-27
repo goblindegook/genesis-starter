@@ -1,9 +1,8 @@
-/**
- * Exponentiation function.
- * @param  {Number} $b Base value.
- * @param  {Number} $n Power value.
- * @return {Number}    Result.
- */
+// Exponentiation function.
+// @param  {Number} $b Base value.
+// @param  {Number} $n Power value.
+// @return {Number}    Result.
+
 @function power ($b, $n) {
   $result: 1;
 
@@ -11,7 +10,9 @@
     @for $i from 1 through $n {
       $result: $result * $b;
     }
-  } @else {
+  }
+
+  @else {
     @for $i from $n to 0 {
       $result: $result / $b;
     }

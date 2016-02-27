@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [unreleased]
+
+- **[Changed]** scss_lint replaced with Stylelint for faster processing.
+
 ## [1.1.0] - January 3, 2016
 - **[Added]** `localStorage` web font caching fallback for JavaScript-disabled browsers.
 - **[Added]** Font bundling is now a separate task from Sass processing (`gulp fonts`) and it takes web fonts without requiring you go to [localFont](http://jaicab.com/localFont/).

@@ -11,7 +11,6 @@ A Genesis Framework starter theme with Gulp support.  I took StudioPress' origin
 * [Gulp](http://gulpjs.com/)
 * [Browserify](http://browserify.org/)
 * [Sass](http://sass-lang.com/)
-* [scss-lint](https://github.com/causes/scss-lint)
 * [GraphicsMagick](http://www.graphicsmagick.org/) (for `gulp-unretina`)
 
 ## Setup

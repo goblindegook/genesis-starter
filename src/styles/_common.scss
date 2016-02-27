@@ -63,8 +63,8 @@
   width: 50%;
 }
 
-.genesis-nav-menu .search [type="submit"],
-.widget_search [type="submit"] {
+.genesis-nav-menu .search [type='submit'],
+.widget_search [type='submit'] {
   border: 0;
   clip: rect(0, 0, 0, 0);
   height: 1px;
@@ -82,7 +82,7 @@
 
 .entry-title {
   font-size: 36px;
-  
+
   a {
     color: $link-active-color;
 

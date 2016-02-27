@@ -19,9 +19,9 @@ textarea {
   }
 }
 
-[type="checkbox"],
-[type="image"],
-[type="radio"] {
+[type='checkbox'],
+[type='image'],
+[type='radio'] {
   width: auto;
 }
 
@@ -32,9 +32,9 @@ textarea {
 }
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"],
+[type='button'],
+[type='reset'],
+[type='submit'],
 .button {
   background-color: $button-color;
   border: 0;
@@ -62,9 +62,9 @@ button,
 }
 
 .footer-widgets button:hover,
-.footer-widgets :hover[type="button"],
-.footer-widgets :hover[type="reset"],
-.footer-widgets :hover[type="submit"],
+.footer-widgets :hover[type='button'],
+.footer-widgets :hover[type='reset'],
+.footer-widgets :hover[type='submit'],
 .footer-widgets .button:hover {
   background-color: $alt-button-active-color;
   color: $alt-button-active-text-color;
@@ -74,7 +74,7 @@ button,
   display: inline-block;
 }
 
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-results-button {
+[type='search']::-webkit-search-cancel-button,
+[type='search']::-webkit-search-results-button {
   display: none;
 }
