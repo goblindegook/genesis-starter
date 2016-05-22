@@ -3,6 +3,7 @@ import browserSync from 'browser-sync';
 import autoprefixer from 'gulp-autoprefixer';
 import nano from 'gulp-cssnano';
 import gulpIf from 'gulp-if';
+import pixrem from 'gulp-pixrem';
 import plumber from 'gulp-plumber';
 import postcss from 'gulp-postcss';
 import sass from 'gulp-sass';
@@ -10,7 +11,6 @@ import sourcemaps from 'gulp-sourcemaps';
 import reporter from 'postcss-reporter';
 import postcssScss from 'postcss-scss';
 import stylelint from 'stylelint';
-import handleErrors from '../util/handle-errors';
 import config from '../config';
 
 const stylelintProcessors = [
@@ -27,7 +27,7 @@ gulp.task('sass', ['images'], () =>
     .pipe(gulpIf(config.environment.debug, sourcemaps.init()))
     .pipe(postcss(stylelintProcessors, {syntax: postcssScss}))
     .pipe(sass(config.sass.settings))
-    .on('error', handleErrors)
+    .pipe(pixrem())
     .pipe(autoprefixer(config.autoprefixer))
     .pipe(nano())
     .pipe(gulpIf(config.environment.debug, sourcemaps.write()))

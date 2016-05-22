@@ -16,7 +16,6 @@ import source from 'vinyl-source-stream';
 import watchify from 'watchify';
 import config from '../config';
 import bundleLogger from '../util/bundle-logger';
-import handleErrors from '../util/handle-errors';
 import {dependencies} from '../../package.json';
 
 let bundleQueue = config.browserify.bundleConfigs.length;
@@ -37,7 +36,6 @@ gulp.task('browserify', (callback) => {
     function bundle() {
       bundleLogger.start(bundleConfig.outputName);
       return bundler.bundle()
-        .on('error', handleErrors)
         .pipe(source(bundleConfig.outputName))
         .pipe(gulp.dest(bundleConfig.dest))
         .on('end', reportFinished);

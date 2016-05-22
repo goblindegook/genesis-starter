@@ -4,7 +4,9 @@ All notable changes to this project will be documented in this file. This projec
 
 ## [unreleased]
 
+- **[Added]** rem-to-pixel fallbacks in CSS.
 - **[Changed]** scss_lint replaced with Stylelint for faster processing.
+- **[Removed]** System notification support for build errors.
 
 ## [1.1.0] - January 3, 2016
 - **[Added]** `localStorage` web font caching fallback for JavaScript-disabled browsers.

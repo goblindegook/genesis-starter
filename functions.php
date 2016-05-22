@@ -18,19 +18,31 @@ define( 'CHILD_THEME_VERSION', '1.0.0' );
 
 //* Add HTML5 markup structure
 \add_theme_support( 'html5', array(
-	'search-form', 'comment-form', 'comment-list'
+	'caption',
+	'comment-form',
+	'comment-list',
+	'gallery',
+	'search-form',
 ) );
 
 //* Add support for accessibility features
-\add_theme_support( 'genesis-accessibility',
-  array( 'headings', 'drop-down-menu', 'search-form', 'skip-links', 'rems' )
-);
+\add_theme_support( 'genesis-accessibility', array(
+	'404-page',
+	'drop-down-menu',
+	'headings',
+	'rems',
+	'search-form',
+	'skip-links',
+) );
 
 //* Add viewport meta tag for mobile browsers
 \add_theme_support( 'genesis-responsive-viewport' );
 
 //* Add support for custom background
 \add_theme_support( 'custom-background' );
+
+//* Add support for a widget area fter the content.
+\add_theme_support( 'genesis-after-entry-widget-area' );
 
 //* Add support for 3-column footer widgets
 \add_theme_support( 'genesis-footer-widgets', 3 );

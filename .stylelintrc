@@ -1,5 +1,6 @@
 {
   "plugins": [
+    "stylelint-scss",
     "stylelint-statement-max-nesting-depth"
   ],
   "rules": {
@@ -31,7 +32,7 @@
     "declaration-colon-newline-after": "always-multi-line",
     "declaration-colon-space-after": "always-single-line",
     "declaration-colon-space-before": "never",
-    "font-family-name-quotes": "single-where-recommended",
+    "font-family-name-quotes": "always-where-recommended",
     "function-calc-no-unspaced-operator": true,
     "function-comma-newline-after": "always-multi-line",
     "function-comma-space-after": "always-single-line",
@@ -39,7 +40,7 @@
     "function-linear-gradient-no-nonstandard-direction": true,
     "function-parentheses-newline-inside": "always-multi-line",
     "function-parentheses-space-inside": "never-single-line",
-    "function-url-quotes": "single",
+    "function-url-quotes": "always",
     "function-whitespace-after": "always",
     "indentation": 2,
     "max-empty-lines": 1,
