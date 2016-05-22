@@ -32,7 +32,7 @@ class Scripts {
 	 */
 	public function ready() {
 		\add_action( 'wp_enqueue_scripts', array( $this, 'enqueue' ) );
-		\add_action( 'wp_head', array( $this, 'load_fonts_fallback' ) );
+		\add_action( 'wp_head', array( $this, 'style_loader_fallback' ) );
 		\add_filter( 'script_loader_tag', array( $this, 'script_loader_async' ), 10, 3 );
 	}
 
@@ -67,9 +67,9 @@ class Scripts {
 	}
 
 	/**
-	 * Include deferred font loading script in the header.
+	 * Include asynchronously loaded assets behind a <noscript> tag as a fallback.
 	 */
-	public function load_fonts_fallback() {
+	public function style_loader_fallback() {
 		echo '<noscript>';
 
 		foreach ( $this->cached_styles as $href ) {
