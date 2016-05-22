@@ -32,7 +32,6 @@ class Scripts {
 	 */
 	public function ready() {
 		\add_action( 'wp_enqueue_scripts', array( $this, 'enqueue' ) );
-		\add_action( 'wp_default_scripts', array( $this, 'default_scripts' ) );
 		\add_action( 'wp_head', array( $this, 'inline' ) );
 		\add_filter( 'script_loader_tag', array( $this, 'async' ), 10, 3 );
 	}
@@ -59,21 +58,10 @@ class Scripts {
 			$this->base_uri . 'app.js',
 			array( 'genesis-starter-infrastructure' ),
 			CHILD_THEME_VERSION, true );
-	}
 
-	/**
-	 * Adjust the default script dependency tree.
-	 *
-	 * @param array $scripts WordPress scripts container.
-	 */
-	public function default_scripts( &$scripts ) {
-		if ( \is_admin() || \is_admin_bar_showing() ) {
-			return $scripts;
-		}
-
-		// Load jQuery in the footer:
-		$scripts->add_data( 'jquery', 'group', 1 );
-		$scripts->add_data( 'jquery-core', 'group', 1 );
+		\wp_localize_script( 'genesis-starter-app', 'genesisStarterL10n', array(
+			'menu' => \__( 'Menu', 'genesis-starter' ),
+		) );
 	}
 
 	/**
