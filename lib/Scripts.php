@@ -32,8 +32,8 @@ class Scripts {
 	 */
 	public function ready() {
 		\add_action( 'wp_enqueue_scripts', array( $this, 'enqueue' ) );
-		\add_action( 'wp_head', array( $this, 'inline' ) );
-		\add_filter( 'script_loader_tag', array( $this, 'async' ), 10, 3 );
+		\add_action( 'wp_head', array( $this, 'load_fonts_fallback' ) );
+		\add_filter( 'script_loader_tag', array( $this, 'script_loader_async' ), 10, 3 );
 	}
 
 	/**
@@ -42,8 +42,6 @@ class Scripts {
 	 * Fired on `wp_enqueue_scripts`.
 	 */
 	public function enqueue() {
-		\wp_enqueue_script( 'jquery-core' );
-
 		\wp_enqueue_script( 'genesis-starter-head',
 			$this->base_uri . 'head.js',
 			array(),
@@ -59,29 +57,26 @@ class Scripts {
 			array( 'genesis-starter-infrastructure' ),
 			CHILD_THEME_VERSION, true );
 
-		\wp_localize_script( 'genesis-starter-app', 'genesisStarterL10n', array(
-			'menu' => \__( 'Menu', 'genesis-starter' ),
+		\wp_localize_script( 'genesis-starter-app', 'genesisStarter', array(
+			'cachedStyles' => $this->cached_styles,
+			'menu'         => \__( 'Menu', 'genesis-starter' ),
 		) );
+
+		\wp_add_inline_script( 'genesis-starter-app',
+			file_get_contents( dirname( __DIR__ ) . '/public/inline.js' ) );
 	}
 
 	/**
 	 * Include deferred font loading script in the header.
 	 */
-	public function inline() {
-		?>
-		<!--noptimize-->
-		<script type="text/javascript">
-			var cachedStyles = <?php echo json_encode( $this->cached_styles ); ?>;
-			<?php include dirname( __DIR__ ) . '/public/inline.js'; ?>
-		</script>
-		<noscript>
-			<?php foreach ( $this->cached_styles as $href ) { ?>
-				<link rel="stylesheet" type="text/css" media="all"
-					href="<?php echo esc_url( $href ) ?>">
-			<?php } ?>
-		</noscript>
-		<!--/noptimize-->
-		<?php
+	public function load_fonts_fallback() {
+		echo '<noscript>';
+
+		foreach ( $this->cached_styles as $href ) {
+			printf( '<link rel="stylesheet" type="text/css" media="all" href="%s">', \esc_url( $href ) );
+		}
+
+		echo '</noscript>';
 	}
 
 	/**
@@ -93,7 +88,7 @@ class Scripts {
 	 *
 	 * @return string      Filteredd script HTML tag.
 	 */
-	public function async( $tag, $handle, $src ) {
+	public function script_loader_async( $tag, $handle, $src ) {
 
 		if ( \is_admin() ) {
 			return $tag;

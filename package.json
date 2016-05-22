@@ -31,8 +31,7 @@
     ]
   },
   "browserify-shim": {
-    "jquery": "global:jQuery",
-    "genesis-starter-l10n": "global:genesisStarterL10n"
+    "jquery": "global:jQuery"
   },
   "devDependencies": {
     "aliasify": "^2.0.0",

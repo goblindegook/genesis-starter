@@ -1,6 +1,6 @@
 import cssCache from './modules/css-cache';
 
-const cachedStyles = window.cachedStyles || {};
+const cachedStyles = window.genesisStarter.cachedStyles || {};
 const html         = document.documentElement;
 
 html.className = html.className.replace(/\bno-js\b/, 'js');
