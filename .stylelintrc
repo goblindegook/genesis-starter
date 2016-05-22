@@ -1,7 +1,6 @@
 {
   "plugins": [
-    "stylelint-scss",
-    "stylelint-statement-max-nesting-depth"
+    "stylelint-scss"
   ],
   "rules": {
     "at-rule-empty-line-before": ["always", {
@@ -71,6 +70,10 @@
     "value-list-comma-newline-after": "always-multi-line",
     "value-list-comma-space-after": "always-single-line",
     "value-list-comma-space-before": "never",
-    "statement-max-nesting-depth": [3, { "countAtRules": false }]
+    "max-nesting-depth": [3, {
+      "ignore": [
+        "at-rules-without-declaration-blocks"
+      ]
+    }]
   }
 }

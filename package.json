@@ -89,7 +89,6 @@
     "sinon": "^1.17.4",
     "stylelint": "^6.5.1",
     "stylelint-scss": "^1.0.0",
-    "stylelint-statement-max-nesting-depth": "^2.0.1",
     "susy": "^2.2.12",
     "uglifyify": "^3.0.1",
     "vinyl": "^1.1.1",
