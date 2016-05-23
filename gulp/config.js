@@ -37,16 +37,18 @@ export default {
     src: src + '/images/**',
     dest: dest + '/images',
     settings: {
-      svgoPlugins: [
-        {
-          cleanupIDs: false
-        },
-        {
-          removeUnknownsAndDefaults: {
-            SVGid: false
+      svgo: {
+        plugins: [
+          {
+            cleanupIDs: false
+          },
+          {
+            removeUnknownsAndDefaults: {
+              SVGid: false
+            }
           }
-        }
-      ]
+        ]
+      }
     }
   },
   svgSprite: {

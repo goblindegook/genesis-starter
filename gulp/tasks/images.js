@@ -24,6 +24,11 @@ gulp.task('images', () =>
     .pipe(filterSvg)
       .pipe(svgSprite(config.svgSprite))
       .pipe(filterSvg.restore)
-    .pipe(imagemin(config.images.settings))
+    .pipe(imagemin([
+      imagemin.gifsicle(),
+      imagemin.jpegtran(),
+      imagemin.optipng(),
+      imagemin.svgo(config.images.settings.svgo),
+    ]))
     .pipe(gulp.dest(config.images.dest))
 );
