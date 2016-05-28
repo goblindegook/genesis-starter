@@ -20,11 +20,9 @@ import {dependencies} from '../../package.json';
 
 let bundleQueue = config.browserify.bundleConfigs.length;
 
-gulp.task('browserify', (callback) => {
-
-  function browserifyThis(bundleConfig) {
-
-    let bundler = browserify({
+gulp.task('browserify', (callback) =>
+  config.browserify.bundleConfigs.map((bundleConfig) => {
+    const bundler = browserify({
       cache:        {},
       packageCache: {},
       fullPaths:    false,
@@ -70,12 +68,10 @@ gulp.task('browserify', (callback) => {
     }
 
     if (global.isWatching) {
-      bundler = watchify(bundler);
-      bundler.on('update', bundle);
+      const watchedBundler = watchify(bundler);
+      watchedBundler.on('update', bundle);
     }
 
     return bundle();
-  };
-
-  return config.browserify.bundleConfigs.forEach(browserifyThis);
-});
+  })
+);
